@@ -253,7 +253,7 @@ a.nav-link {
 
   body{
     padding: 0;
-    padding-bottom: 56px;
+    /* padding-bottom: 56px; */
     background: #60a268;
   }
   .signature{
