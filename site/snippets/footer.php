@@ -1,8 +1,13 @@
+
+<h6 class="signatureMobile poiret">
+  Diseñada por <a href="#">Hernan Levi</a>
+</h6>
+
 <!-- Footer -->
 <footer class="page-footer font-small indigo">
 
     <h6 class="signature poiret">
-      Desarrollada por <a href="#">Hernan Levi</a>
+      Diseñada por <a href="#">Hernan Levi</a>
     </h6>
 
   </footer>

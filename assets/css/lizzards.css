@@ -158,7 +158,10 @@ padding: 10px;
   align-self: center;
 }
 
-.bitten{clip-path: polygon(20px 0%, 0 20px, 0 100%, 100% 100%, 100% 0px);}
+.bitten{
+  clip-path: polygon(20px 0%, 0 20px, 0 100%, 100% 100%, 100% 0px);
+  -webkit-clip-path: polygon(20px 0%, 0 20px, 0 100%, 100% 100%, 100% 0px);
+}
 
 .header-grid { grid-area: header;
   background: 0 !important;
@@ -196,6 +199,7 @@ footer{
 
 .header-torneo{
   clip-path: polygon(0 0%, 0 100%, 100% 100%, calc(100% - 20px) 0%);
+  -webkit-clip-path: polygon(0 0%, 0 100%, 100% 100%, calc(100% - 20px) 0%);
   width: 50%;
   margin-right: auto;}
 .header-torneo h4{
@@ -205,6 +209,7 @@ footer{
 .header-sociales {
     margin-left: auto;
     clip-path: polygon(0 0%, 20px 100%, 100% 100%, 100% 0%);
+    -webkit-clip-path: polygon(0 0%, 20px 100%, 100% 100%, 100% 0%);
     padding: 0 20px;
 }
 .header-torneo, .header-sociales{
@@ -232,7 +237,9 @@ a.nav-link {
   font-size: 20px;
 }
 
-
+.signatureMobile{
+  display: none;
+}
 
 @media only screen and (min-width: 600px) {
 
@@ -243,6 +250,7 @@ a.nav-link {
     padding: 0;
     min-height: 100vh;
   }
+
   body{
     padding: 0;
     padding-bottom: 56px;
@@ -250,6 +258,10 @@ a.nav-link {
   }
   .signature{
     display: none;
+  }
+  .signatureMobile{
+    display: block;
+    text-align: right;
   }
   .grid-container{
     margin-top: 56px;
