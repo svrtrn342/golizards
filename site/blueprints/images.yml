@@ -1,0 +1,7 @@
+title: Images
+pages: false
+files: true
+  fields:
+    text:
+      label: Texto
+      type:  text

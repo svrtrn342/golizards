@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+
+<style>
+.item1 { grid-area: header; }
+.carousel { grid-area: fotos; }
+.marquee { grid-area: quote; }
+.torneodiv { grid-area: torneos; }
+.textodiv { grid-area: contacto; }
+.sponsordiv { grid-area: sponsors; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header'
+    'fotos torneos'
+    'fotos contacto'
+    'quote sponsors';
+  grid-gap: 5px;
+  padding: 10px;
+  grid-template-columns: 50%;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 40px 0;
+  font-size:24px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px -3px;
+}
+  html{
+    height: 100%;
+    padding: 100px;
+  }
+  body{
+    background: url('football.jpg');
+    background-size: cover;
+    height: 100%;
+  }
+  *{
+    font-family: 'Press Start 2P', monospace;
+  }
+  .main{
+  /* background: #ffff55; */
+  margin: 200px;
+  border: solid #fff 10px;
+  border-radius: 40px;
+  padding: 50px;
+  color: #fff;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 30px;
+  font-weight: bolder;
+  position: relative
+}
+.mainbg{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  opacity: 0.3;
+  top: 0;
+  left: 0;
+  z-index: -99;
+}
+h6{
+margin: 20px;
+}
+h6:hover {
+  /*text-decoration: underline;*/
+}
+
+</style>
+</head>
+<body>
+
+<div class="grid-container">
+  <div class="item1">Header</div>
+  <div class="carousel">Fotos</div>
+  <div class="marquee"><marquee>Jugá con amigos, jugá en las mejores canchas</marquee></div>
+  <div class="torneodiv">Torneos</div>
+  <div class="textodiv">Contacto</div>
+  <div class="sponsordiv">Sponsors</div>
+</div>
+
+</body>
+</html>

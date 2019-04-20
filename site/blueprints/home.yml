@@ -1,0 +1,11 @@
+title: Home
+pages: images
+files: false
+fields:
+  title:
+    label: Title
+    type:  text
+
+  quote:
+    label: Quote
+    type:  text

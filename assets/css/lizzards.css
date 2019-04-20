@@ -1,0 +1,234 @@
+
+
+html{
+  height: fit-content;
+  padding: 100px;
+  position: relative;
+}
+body{
+  background: url('../images/field.jpg');
+  background-size: cover;
+  height: 100%;
+  background-attachment: fixed;
+}
+*{
+  font-family: 'Audiowide', monospace;
+}
+.poiret, .poiret p, .poiret a, .poiret marquee{
+  font-family: "Poiret One" !important;
+  color: #000
+}
+nav, footer{
+  box-shadow: 0 0 10px -3px;
+}
+
+.signature{
+  float: right;
+  margin: 10px;
+}
+
+  h6{
+    margin: 20px;
+  }
+  h6:hover {
+    /*text-decoration: underline;*/
+  }
+/* TABLAS */
+
+.tabla{
+  width: 100%;
+  /* background: #fff; */
+  border-radius: 3px;
+  overflow: hidden;
+  border: solid 1px #000f;
+  /* box-shadow: 0 0 10px -7px; */
+}
+.tabla td{
+  font-size: 14px;
+}
+.tabla-header{
+  font-family: "Poiret One";
+  font-size: 30px;
+  font-weight: bolder;
+    text-align: left;
+    padding: 10px 20px;
+}
+
+.tabla thead tr td{
+  background: #28a745;
+  padding: 0 10px;
+  color: #fff;
+  font-family: "Poiret one";
+  font-weight: bolder;
+  font-size: 20px;
+  opacity: 0.8;
+}
+
+.fixture-div {
+    display: inline-block;
+    padding: 20px 10px;
+    padding-top: 0;
+}
+/* home */
+.mapa {
+    grid-area: mapa;
+    background-size: cover !important;
+    background-position: 50% !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all ease 0.5s;
+}
+.mapa:hover, .torneodiv:hover{
+  background-position: 53% 53% !important;
+  cursor: pointer;
+}
+.texto{
+  grid-area: texto;
+  padding: 20px;
+}
+.proxima-title{
+    text-align: left;
+    margin-left: 10px;
+    margin-bottom: 0;
+}
+
+
+/* TILES */
+.sponsors{
+  grid-area: sponsors;
+  padding: 0 !important;
+  background: 0 !important;
+  box-shadow: 0 0 !important;
+  /* display: flex;
+  align-items: center; */
+}
+.grid-container{
+grid-gap: 5px;
+padding: 10px;
+  display: grid;
+  filter: drop-shadow(0 0 3px #0009);
+}
+.grid-container .poiret {
+    font-size: 20px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  border-radius: 3px;
+  /* box-shadow: 0 0 10px -3px; */
+  position: relative;
+}
+.grid-container > div h2{
+
+}
+
+.bitten{clip-path: polygon(20px 0%, 0 20px, 0 100%, 100% 100%, 100% 0px);}
+
+.header-grid { grid-area: header;
+  background: 0 !important;
+  box-shadow: 0 0 !important;
+  padding: 0 !important;
+  justify-content: space-between;
+  display: flex;
+  /* filter: drop-shadow(0 0 3px #0009); */
+  color: #fff;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.page-title {
+    grid-area: title;
+    text-align: center;
+    font-family: Monoton;
+    padding: 10px;
+    text-shadow: 0px 0px 10px #666;
+    background: #28a745cc;
+    border-radius: 3px;
+    box-shadow: 0 0 10px -5px #000;
+    margin: 0;
+    color: #fff;
+}
+
+/* HEADER AND FOOTER */
+footer{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    background: #28a745!important;
+    margin-top: 50px;
+}
+
+.header-torneo{
+  clip-path: polygon(0 0%, 0 100%, 100% 100%, calc(100% - 20px) 0%);
+  width: 50%;
+  margin-right: auto;}
+.header-torneo h4{
+  margin: 0;
+}
+
+.header-sociales {
+    margin-left: auto;
+    clip-path: polygon(0 0%, 20px 100%, 100% 100%, 100% 0%);
+    padding: 0 20px;
+}
+.header-torneo, .header-sociales{
+  height: 40px;
+  background: #28a745aa !important;
+  padding-left: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.ball {
+  height: 80%;
+  /* float: left; */
+  margin-right: 20px;
+}
+
+/* NAV */
+a.nav-link {
+  font-size: 20px;
+  font-family: "poiret one";
+  font-weight: bold
+}
+.header-sociales i{
+  margin: 0 10px;
+  font-size: 20px;
+}
+
+
+
+@media only screen and (min-width: 600px) {
+
+}
+
+@media only screen and (max-width: 768px) {
+  html{
+    padding: 60px 0;
+  }
+
+.header-torneo h4, .header-sociales i{
+  font-size: 16px;
+}
+.header-torneo{
+  padding-left: 10px;
+}
+.carousel{
+  height: 250px;
+}
+.contacto{
+  padding: 10px;
+  overflow: hidden
+}
+h3, h4{
+  font-size: 1rem
+}
+h5{
+  font-size: 0.75rem
+}
+
+
+
+}
