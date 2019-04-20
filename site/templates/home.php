@@ -42,7 +42,8 @@ p.slider-text {
   align-items: center;
 }
 .contacto{
-  grid-area: contacto
+  grid-area: contacto;
+  padding: 20px;
 }
 
 .grid-container {
@@ -50,11 +51,11 @@ p.slider-text {
   grid-template-areas:
   'header header'
   'fotos torneos'
-  'fotos contacto'
+  'fotos texto'
   'fotos sponsors'
   'quote sponsors'
   'title title'
-  'mapa texto'
+  'mapa contacto'
   ;
   grid-gap: 5px;
   padding: 10px;
