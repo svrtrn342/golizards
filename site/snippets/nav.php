@@ -7,19 +7,19 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Inicio
-            <span class="sr-only">(current)</span>
+        <li class="nav-item">
+          <a class="nav-link" href="<?= $site->url() ?>">Inicio
+            <!-- <span class="sr-only">(current)</span> -->
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Fútbol Masculino</a>
+          <a class="nav-link" href="<?= $site->children()->find('futbol-7-masculino')->url() ?>">Fútbol Masculino</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Reglamento</a>
+          <a class="nav-link" href="<?= $site->children()->find('faq')->url() ?>">Reglamento</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">FAQ</a>
+          <a class="nav-link" href="<?= $site->children()->find('faq')->url() ?>">FAQ</a>
         </li>
       </ul>
     </div>
