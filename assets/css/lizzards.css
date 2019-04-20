@@ -208,9 +208,16 @@ a.nav-link {
   html{
     padding: 60px 0;
   }
+  .grid-container{
+    grid-template-columns: min-content
+  }
+  .row{
+    margin-left: 0;
+    margin-right: 0;
+  }
 
 .header-torneo h4, .header-sociales i{
-  font-size: 16px;
+  font-size: 14px;
 }
 .header-torneo{
   padding-left: 10px;
@@ -229,6 +236,8 @@ h5{
   font-size: 0.75rem
 }
 
-
+.tabla thead tr td{
+  font-size: 16px;
+}
 
 }

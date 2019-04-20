@@ -60,7 +60,7 @@ p.proxDate {
 
       <h1 class="page-title">Futbol 7 masculino</h1>
 
-    <div class="equipos p-0 bitten">
+    <div class="equipos p-0 bitten" style="overflow: auto">
       <h2 class="tabla-header">tabla de posiciones</h2>
       <table class="tabla" id="tablaPos" border="1">
         <thead>
