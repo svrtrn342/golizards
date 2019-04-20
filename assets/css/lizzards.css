@@ -2,7 +2,7 @@
 html {
     background: url('../images/field.jpg') no-repeat center center fixed;
     background-size: cover;
-    height: 100%;
+    height: calc(100% + 56px);
     overflow: hidden;
     position: relative;
 }
@@ -11,6 +11,7 @@ body {
     overflow: auto;
     background: none;
     padding: 80px 200px;
+    padding-bottom: 112px;
 }
 
 
@@ -188,7 +189,7 @@ footer{
     position: absolute;
     width: 100%;
     left: 0;
-    bottom: 0;
+    bottom: 56px;
     background: #28a745!important;
     margin-top: 50px;
 }
@@ -244,6 +245,7 @@ a.nav-link {
   }
   body{
     padding: 0;
+    padding-bottom: 56px;
   }
   .signature{
     display: none;
