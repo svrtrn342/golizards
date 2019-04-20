@@ -3,17 +3,6 @@
 <?= js('assets/js/tabletop.js') ?>
 
 <style>
-.grid-container {
-  grid-template-areas:
-  'header header'
-  'title title'
-  'equipos jugadores'
-  'fixture proximafecha'
-  'fixture sponsors'
-  'fixture null'
-  ;
-  grid-template-columns: 60%;
-}
 .equipos { grid-area: equipos;
 }
 .jugadores {
@@ -29,9 +18,35 @@
 }
 
 p.proxDate {
-    position: absolute;
-    top: 10px;
-    right: 10px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.grid-container {
+  grid-template-areas:
+  'header header'
+  'title title'
+  'equipos jugadores'
+  'fixture proximafecha'
+  'fixture sponsors'
+  'fixture null'
+  ;
+  grid-template-columns: 60%;
+}
+
+@media only screen and (max-width: 768px) {
+  .grid-container {
+    grid-template-areas:
+    'header header'
+    'title title'
+    'equipos equipos'
+    'jugadores jugadores'
+    'proximafecha proximafecha'
+    'sponsors sponsors'
+    'fixture fixture'
+    ;
+    grid-template-columns: 50%;
+  }
 }
 </style>
 
