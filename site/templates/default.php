@@ -7,7 +7,7 @@
   'title title'
   'text text'
   ;
-  grid-template-columns: 60%;
+  grid-template-columns: 50%;
 }
 .page-text{
   grid-area: text;

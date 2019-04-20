@@ -2,13 +2,14 @@
 
 html{
   height: fit-content;
+  min-height: 100%;
   padding: 100px;
   position: relative;
 }
 body{
   background: url('../images/field.jpg');
   background-size: cover;
-  height: 100%;
+  height: fit-content;
   background-attachment: fixed;
 }
 *{
@@ -20,6 +21,7 @@ body{
 }
 nav, footer{
   box-shadow: 0 0 10px -3px;
+  width: 100%;
 }
 
 .signature{
@@ -33,6 +35,14 @@ nav, footer{
   h6:hover {
     /*text-decoration: underline;*/
   }
+
+  svg{
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    display:inline-block;
+  }
+
 /* TABLAS */
 
 .tabla{
@@ -122,6 +132,15 @@ padding: 10px;
 }
 .grid-container > div h2{
 
+}
+
+.svgLoader{
+    height: 50vh;
+    display: flex;
+    justify-content: center
+}
+.svgLoader svg{
+  align-self: center;
 }
 
 .bitten{clip-path: polygon(20px 0%, 0 20px, 0 100%, 100% 100%, 100% 0px);}
