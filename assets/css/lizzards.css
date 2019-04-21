@@ -193,6 +193,14 @@ padding: 10px;
     color: #fff;
 }
 
+.sponsordiv { grid-area: sponsors;
+  padding: 0 !important;
+  background: 0 !important;
+  box-shadow: 0 0 !important;
+  display: flex;
+  align-items: center;
+}
+
 /* HEADER AND FOOTER */
 footer{
     position: absolute;

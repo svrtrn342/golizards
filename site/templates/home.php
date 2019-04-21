@@ -38,17 +38,11 @@ a.slider-text,p.slider-text  {
   /* background-position: 55% 55% !important */
 }
 .textodiv { grid-area: texto; }
-.sponsordiv { grid-area: sponsors;
-  padding: 0 !important;
-  background: 0 !important;
-  box-shadow: 0 0 !important;
-  display: flex;
-  align-items: center;
-}
+
 .contacto{
   grid-area: contacto;
   padding: 20px;
-  zoom: 0.8;
+  /* zoom: 0.8; */
 }
 
 .grid-container {
@@ -79,6 +73,10 @@ a.slider-text,p.slider-text  {
     'texto texto'
     ;
     grid-template-columns: 40%;
+  }
+  .contacto{
+    padding: 10px;
+    zoom: 0.8;
   }
 }
 
@@ -126,23 +124,15 @@ h6:hover {
 
 
       <div class="marquee poiret"><marquee scrollamount="10"><?= $page->banner() ?></marquee></div>
-      <div class="torneodiv bitten"><a href="<?= $site->children()->find('futbol-7-masculino')->url() ?>" class="slider-text">Fútbol 7 Masculino</a></div>
+      <a href="<?= $site->children()->find('futbol-7-masculino')->url() ?>"  class="torneodiv bitten"><p class="slider-text">Fútbol 7 Masculino</p></a>
       <div class="textodiv bitten" style="padding: 20px; text-align: left">
 
         <p class="poiret"><?= $page->text() ?></p>
 
       </div>
-      <div class="sponsordiv">
-        <div class="row">
 
-          <?php foreach ($site->children()->find('sponsors')->images() as $sponsor): ?>
-            <div class="col sponsorcol">
-              <img class="sponsor w-100" src="<?= $sponsor->url() ?>" alt="">
-            </div>
-          <?php endforeach ?>
 
-        </div>
-      </div>
+      <?= snippet('sponsors') ?>
 
       <h1 class="page-title">Contacto</h1>
 

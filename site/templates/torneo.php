@@ -98,103 +98,89 @@ p.proxDate {
   to="360 50 50"
   repeatCount="indefinite" />
 </path>
-    </svg>
+</svg>
+</div>
+
+<?php snippet('header-grid')?>
+
+
+
+<h1 class="page-title">Futbol 7 masculino</h1>
+
+<div class="equipos p-0 bitten" style="overflow: auto">
+  <h2 class="tabla-header">tabla de posiciones</h2>
+  <table class="tabla" id="tablaPos" border="1">
+    <thead>
+      <tr>
+        <td>Equipo</td>
+        <td>Pts</td>
+        <td>PJ</td>
+        <td>PG</td>
+        <td>PE</td>
+        <td>PP</td>
+        <td>GF</td>
+        <td>GC</td>
+        <td>Dif</td>
+        <!-- <td>Amarillas</td>
+          <td>Rojas</td>
+          <td>FairPlay</td> -->
+        </tr>
+      </thead>
+      <!-- <tr><td>Cumbia</td><td>0</td><td>3</td><td>0</td><td>0</td><td>2</td><td>0</td><td>4</td><td>-4</td></tr><tr><td>Village</td><td>3</td><td>2</td><td>1</td><td>0</td><td>0</td><td>2</td><td>0</td><td>2</td></tr><tr><td>Cachengue</td><td>6</td><td>3</td><td>2</td><td>0</td><td>0</td><td>5</td><td>1</td><td>4</td></tr><tr><td>Carioca</td><td>0</td><td>2</td><td>0</td><td>0</td><td>1</td><td>1</td><td>3</td><td>-2</td></tr>
+        <tr><td>Cumbia</td><td>0</td><td>3</td><td>0</td><td>0</td><td>2</td><td>0</td><td>4</td><td>-4</td></tr><tr><td>Village</td><td>3</td><td>2</td><td>1</td><td>0</td><td>0</td><td>2</td><td>0</td><td>2</td></tr><tr><td>Cachengue</td><td>6</td><td>3</td><td>2</td><td>0</td><td>0</td><td>5</td><td>1</td><td>4</td></tr><tr><td>Carioca</td><td>0</td><td>2</td><td>0</td><td>0</td><td>1</td><td>1</td><td>3</td><td>-2</td></tr> -->
+      </table>
+
     </div>
-
-    <?php snippet('header-grid')?>
-
-
-
-    <h1 class="page-title">Futbol 7 masculino</h1>
-
-    <div class="equipos p-0 bitten" style="overflow: auto">
-      <h2 class="tabla-header">tabla de posiciones</h2>
-      <table class="tabla" id="tablaPos" border="1">
+    <div class="jugadores">
+      <h2 class="tabla-header">goleadores</h2>
+      <table class="tabla" id="tablaJug" border="1">
         <thead>
           <tr>
+            <td>Jugador</td>
             <td>Equipo</td>
-            <td>Pts</td>
-            <td>PJ</td>
-            <td>PG</td>
-            <td>PE</td>
-            <td>PP</td>
-            <td>GF</td>
-            <td>GC</td>
-            <td>Dif</td>
+            <td>Goles</td>
             <!-- <td>Amarillas</td>
-              <td>Rojas</td>
-              <td>FairPlay</td> -->
+              <td>Rojas</td> -->
             </tr>
           </thead>
-          <!-- <tr><td>Cumbia</td><td>0</td><td>3</td><td>0</td><td>0</td><td>2</td><td>0</td><td>4</td><td>-4</td></tr><tr><td>Village</td><td>3</td><td>2</td><td>1</td><td>0</td><td>0</td><td>2</td><td>0</td><td>2</td></tr><tr><td>Cachengue</td><td>6</td><td>3</td><td>2</td><td>0</td><td>0</td><td>5</td><td>1</td><td>4</td></tr><tr><td>Carioca</td><td>0</td><td>2</td><td>0</td><td>0</td><td>1</td><td>1</td><td>3</td><td>-2</td></tr>
-          <tr><td>Cumbia</td><td>0</td><td>3</td><td>0</td><td>0</td><td>2</td><td>0</td><td>4</td><td>-4</td></tr><tr><td>Village</td><td>3</td><td>2</td><td>1</td><td>0</td><td>0</td><td>2</td><td>0</td><td>2</td></tr><tr><td>Cachengue</td><td>6</td><td>3</td><td>2</td><td>0</td><td>0</td><td>5</td><td>1</td><td>4</td></tr><tr><td>Carioca</td><td>0</td><td>2</td><td>0</td><td>0</td><td>1</td><td>1</td><td>3</td><td>-2</td></tr> -->
-        </table>
-
+          <!-- <tr><td>Bana</td><td>Cachengue</td><td>4</td></tr><tr><td>Noni</td><td>Cachengue</td><td>1</td></tr><tr><td>Pochi</td><td>Cumbia</td><td>2</td></tr><tr><td>Palga</td><td>Village</td><td>2</td></tr><tr><td>Susi</td><td>Village</td><td>3</td></tr>
+            <tr><td>Bana</td><td>Cachengue</td><td>4</td></tr><tr><td>Noni</td><td>Cachengue</td><td>1</td></tr><tr><td>Pochi</td><td>Cumbia</td><td>2</td></tr><tr><td>Palga</td><td>Village</td><td>2</td></tr><tr><td>Susi</td><td>Village</td><td>3</td></tr>
+            <tr><td>Bana</td><td>Cachengue</td><td>4</td></tr><tr><td>Noni</td><td>Cachengue</td><td>1</td></tr><tr><td>Pochi</td><td>Cumbia</td><td>2</td></tr><tr><td>Palga</td><td>Village</td><td>2</td></tr><tr><td>Susi</td><td>Village</td><td>3</td></tr> -->
+          </table>
         </div>
-        <div class="jugadores">
-          <h2 class="tabla-header">goleadores</h2>
-          <table class="tabla" id="tablaJug" border="1">
-            <thead>
-              <tr>
-                <td>Jugador</td>
-                <td>Equipo</td>
-                <td>Goles</td>
-                <!-- <td>Amarillas</td>
-                  <td>Rojas</td> -->
-                </tr>
-              </thead>
-              <!-- <tr><td>Bana</td><td>Cachengue</td><td>4</td></tr><tr><td>Noni</td><td>Cachengue</td><td>1</td></tr><tr><td>Pochi</td><td>Cumbia</td><td>2</td></tr><tr><td>Palga</td><td>Village</td><td>2</td></tr><tr><td>Susi</td><td>Village</td><td>3</td></tr>
-              <tr><td>Bana</td><td>Cachengue</td><td>4</td></tr><tr><td>Noni</td><td>Cachengue</td><td>1</td></tr><tr><td>Pochi</td><td>Cumbia</td><td>2</td></tr><tr><td>Palga</td><td>Village</td><td>2</td></tr><tr><td>Susi</td><td>Village</td><td>3</td></tr>
-              <tr><td>Bana</td><td>Cachengue</td><td>4</td></tr><tr><td>Noni</td><td>Cachengue</td><td>1</td></tr><tr><td>Pochi</td><td>Cumbia</td><td>2</td></tr><tr><td>Palga</td><td>Village</td><td>2</td></tr><tr><td>Susi</td><td>Village</td><td>3</td></tr> -->
-            </table>
+
+
+
+        <div class="fixture bitten">
+          <h2 class="tabla-header">fixture</h2>
+          <div id="fechas">
+
+
           </div>
 
+        </div>
+
+        <?= snippet('sponsors') ?>
+
+        <div class="proximafecha">
+          <div id="proximaF">
+            <p class="proxima-title">Fecha <span id="proximaFechaNumber"></span> <span class="poiret" id="proximaFechaFecha"></span></p>
+            <table class="tabla" border="1" id="proximaFechaTabla"><thead><tr><td>Hora</td><td>Local</td><td>Visitante</td></tr></thead>
+              <tbody>
+                <!-- <tr><td></td><td>Village</td><td>Carioca</td></tr><tr><td></td><td>Cumbia</td><td>Cachengue</td></tr>
+                  <tr><td></td><td>Village</td><td>Carioca</td></tr><tr><td></td><td>Cumbia</td><td>Cachengue</td></tr> -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <script type="text/javascript">
+          var public_spreadsheet_url = '<?= $page->gsheet() ?>';
+          var myBase
+        </script>
+
+        <?php snippet('tabletop') ?>
 
 
-          <div class="fixture bitten">
-            <h2 class="tabla-header">fixture</h2>
-            <div id="fechas">
-
-
-                            </div>
-
-                          </div>
-
-                          <div class="sponsors">
-                            <div class="row">
-                              <div class="col sponsorcol">
-                                <img class="sponsor w-100" src="<?php echo url('assets/images/quilmes.jpg') ?>" alt="">
-                              </div>
-                              <div class="col sponsorcol">
-                                <img class="sponsor w-100" src="<?php echo url('assets/images/quilmes.jpg') ?>" alt="">
-                              </div>
-                              <div class="col sponsorcol">
-                                <img class="sponsor w-100" src="<?php echo url('assets/images/quilmes.jpg') ?>" alt="">
-                              </div>
-                              <div class="col sponsorcol">
-                                <img class="sponsor w-100" src="<?php echo url('assets/images/quilmes.jpg') ?>" alt="">
-                              </div>
-                            </div>
-                          </div>
-                          <div class="proximafecha">
-                            <div id="proximaF">
-                              <p class="proxima-title">Fecha <span id="proximaFechaNumber"></span> <span class="poiret" id="proximaFechaFecha"></span></p>
-                              <table class="tabla" border="1" id="proximaFechaTabla"><thead><tr><td>Hora</td><td>Local</td><td>Visitante</td></tr></thead>
-                                <tbody>
-                                  <!-- <tr><td></td><td>Village</td><td>Carioca</td></tr><tr><td></td><td>Cumbia</td><td>Cachengue</td></tr>
-                                  <tr><td></td><td>Village</td><td>Carioca</td></tr><tr><td></td><td>Cumbia</td><td>Cachengue</td></tr> -->
-                                </tbody>
-                              </table>
-                              </div>
-                            </div>
-                          </div>
-
-                          <script type="text/javascript">
-                          var public_spreadsheet_url = '<?= $page->gsheet() ?>';
-                          var myBase
-                          </script>
-
-                          <?php snippet('tabletop') ?>
-
-
-                          <?php snippet('footer') ?>
+        <?php snippet('footer') ?>
