@@ -16,10 +16,10 @@
           <a class="nav-link" href="<?= $site->children()->find('futbol-7-masculino')->url() ?>">Fútbol Masculino</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="<?= $site->children()->find('faq')->url() ?>">Reglamento</a>
+          <a class="nav-link" href="<?= $site->children()->find('faq')->url() ?>">FAQ</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="<?= $site->children()->find('faq')->url() ?>">FAQ</a>
+          <a class="nav-link" href="<?= $site->children()->find('reglamento')->url() ?>">Reglamento</a>
         </li>
       </ul>
     </div>

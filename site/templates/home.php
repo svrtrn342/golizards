@@ -3,13 +3,15 @@
 <link href="https://fonts.googleapis.com/css?family=Audiowide|Monoton|Poiret+One|Press+Start+2P" rel="stylesheet">
 
 <style>
-p.slider-text {
+a.slider-text,p.slider-text  {
   font-size: 20px;
   text-shadow: 0 0 10px #000;
   max-width: 50%;
+  text-decoration: none;
+  color: #fff
 }
 .mapa{
-  background: url('<?php echo url('assets/images/mapa.png') ?>');
+  background: url('<?= $page->mapa()->toFile()->url() ?>');
 }
 
 .carousel { grid-area: fotos; }
@@ -18,6 +20,7 @@ p.slider-text {
   height: fit-content;
   margin: auto 0;
   display: flex;
+  align-items: center;
 }
 .torneodiv { grid-area: torneos;
   /* padding: 10px; */
@@ -59,7 +62,7 @@ p.slider-text {
   ;
   grid-gap: 5px;
   padding: 10px;
-  grid-template-columns: 60%;
+  grid-template-columns: 50%;
 }
 @media only screen and (max-width: 768px) {
   .grid-container {
@@ -73,7 +76,7 @@ p.slider-text {
     'mapa contacto'
     'texto texto'
     ;
-    grid-template-columns: 50%;
+    grid-template-columns: 40%;
   }
 }
 
@@ -91,25 +94,6 @@ h6:hover {
 
   <div class="grid-container">
     <?php snippet('header-grid') ?>
-
-    <h1 class="page-title">Contacto</h1>
-
-    <div class="mapa bitten">
-      <h2 class="">cómo llegar?</h2>
-    </div>
-
-    <div class="contacto bitten">
-      <h4>Los Lagartos Country Club</h4>
-      <h5>Ramal Pilar Km 46, Pilar, Buenos Aires</h5>
-      <div class="poiret">
-
-        <h3>futbollagartos@gmail.com</h3>
-        <p>@futbollagartos</p>
-      </div>
-    </div>
-
-
-
 
     <div class="carousel p-0">
       <div id="carouselExampleControls" class="carousel slide h-100" data-ride="carousel">
@@ -139,30 +123,38 @@ h6:hover {
     </div>
 
 
-      <div class="marquee poiret"><marquee scrollamount="10">Fecha suspendida por lluvia!</marquee></div>
-      <div class="torneodiv bitten"><p class="slider-text">Fútbol 7 Masculino</p></div>
+      <div class="marquee poiret"><marquee scrollamount="10"><?= $page->banner() ?></marquee></div>
+      <div class="torneodiv bitten"><a href="<?= $site->children()->find('futbol-7-masculino')->url() ?>" class="slider-text">Fútbol 7 Masculino</a></div>
       <div class="textodiv bitten" style="padding: 20px; text-align: left">
 
-        <p class="poiret">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+        <p class="poiret"><?= $page->text() ?></p>
 
       </div>
       <div class="sponsordiv">
         <div class="row">
-          <div class="col sponsorcol">
-            <img class="sponsor w-100" src="<?php echo url('assets/images/quilmes.jpg') ?>" alt="">
-          </div>
-          <div class="col sponsorcol">
-            <img class="sponsor w-100" src="<?php echo url('assets/images/quilmes.jpg') ?>" alt="">
-          </div>
-          <div class="col sponsorcol">
-            <img class="sponsor w-100" src="<?php echo url('assets/images/quilmes.jpg') ?>" alt="">
-          </div>
-          <div class="col sponsorcol">
-            <img class="sponsor w-100" src="<?php echo url('assets/images/quilmes.jpg') ?>" alt="">
-          </div>
+
+          <?php foreach ($site->children()->find('sponsors')->images() as $sponsor): ?>
+            <div class="col sponsorcol">
+              <img class="sponsor w-100" src="<?= $sponsor->url() ?>" alt="">
+            </div>
+          <?php endforeach ?>
+
         </div>
       </div>
 
+      <h1 class="page-title">Contacto</h1>
+
+      <a href="https://goo.gl/maps/BtPVAc6KGZP7ZhgGA" target="_blank" class="mapa bitten">
+        <h2 class="">cómo llegar?</h2>
+      </a>
+
+      <div class="contacto bitten">
+        <h4>Los Lagartos Country Club</h4>
+        <h5>Ramal Pilar Km 46, <br>Pilar, Buenos Aires</h5>
+        <div class="poiret">
+          <?= $page->mail()->kirbytext() ?>
+        </div>
+      </div>
 
       <!-- container grid -->
     </div>

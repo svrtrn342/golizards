@@ -189,6 +189,10 @@ p.proxDate {
                             </div>
                           </div>
 
+                          <script type="text/javascript">
+                          var public_spreadsheet_url = '<?= $page->gsheet() ?>';
+                          var myBase
+                          </script>
 
                           <?php snippet('tabletop') ?>
 

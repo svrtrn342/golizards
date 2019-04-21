@@ -1,11 +1,26 @@
 title: Home
 pages: images
-files: false
+files: true
 fields:
   title:
     label: Title
     type:  text
 
-  quote:
-    label: Quote
+  banner:
+    label: Banner
     type:  text
+
+  text:
+    label: Text
+    type:  textarea
+    size:  small
+
+  mapa:
+    label: Map
+    type:  image
+    required: true
+
+  mail:
+    label: Mail
+    type:  textarea
+    size:  small

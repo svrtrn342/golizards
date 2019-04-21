@@ -1,12 +1,6 @@
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/0.10.0/lodash.min.js"></script>
 
 <script type="text/javascript">
-
-
-
-var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1XBGsnX-QLhONkvk1AKF2sLFcQboVwdbsh7Ucyfo9f_I/';
-var myBase
-
 // function sortPuntos(a,b) {
 //   if (a[1] < b[1])
 //     return 1;

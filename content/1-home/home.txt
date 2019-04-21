@@ -1,0 +1,24 @@
+Title: Inicio
+
+----
+
+Quote: Jugá con amigos, jugá en las mejores canchas
+
+----
+
+Banner: Fecha suspendida por lluvia!
+
+----
+
+Text: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+----
+
+Mapa: mapa.png
+
+----
+
+Mail: 
+
+futbollagartos@gmail.com
+11-5741-2163

@@ -103,6 +103,11 @@ nav, footer{
     justify-content: center;
     align-items: center;
     transition: all ease 0.5s;
+    text-decoration: none !important;
+}
+.bitten h2{
+  text-decoration: none !important;
+  color: #000 !important;
 }
 .mapa:hover, .torneodiv:hover{
   background-position: 53% 53% !important;
@@ -161,6 +166,7 @@ padding: 10px;
 .bitten{
   clip-path: polygon(20px 0%, 0 20px, 0 100%, 100% 100%, 100% 0px);
   -webkit-clip-path: polygon(20px 0%, 0 20px, 0 100%, 100% 100%, 100% 0px);
+  text-decoration: none !important
 }
 
 .header-grid { grid-area: header;
