@@ -12,6 +12,7 @@ a.slider-text,p.slider-text  {
 }
 .mapa{
   background: url('<?= $page->mapa()->toFile()->url() ?>');
+  padding: 20px;
 }
 
 .carousel { grid-area: fotos; }
@@ -47,6 +48,7 @@ a.slider-text,p.slider-text  {
 .contacto{
   grid-area: contacto;
   padding: 20px;
+  zoom: 0.8;
 }
 
 .grid-container {
