@@ -25,7 +25,7 @@ a.slider-text,p.slider-text  {
 }
 .torneodiv { grid-area: torneos;
   /* padding: 10px; */
-  height: 90px;
+  height: 120px;
   background: url('<?php echo url('assets/images/fooball.jpg') ?>');
   background-size: cover;
   background-position: 50% 50%;
@@ -50,12 +50,12 @@ a.slider-text,p.slider-text  {
   grid-template-areas:
   'header header'
   'fotos torneos'
-  'fotos texto'
   'fotos sponsors'
   'quote sponsors'
   'title title'
   'mapa contacto'
   ;
+  /* 'fotos texto' */
   grid-gap: 5px;
   padding: 10px;
   grid-template-columns: 50%;
@@ -125,11 +125,11 @@ h6:hover {
 
       <div class="marquee poiret"><marquee scrollamount="10"><?= $page->banner() ?></marquee></div>
       <a href="<?= $site->children()->find('futbol-7-masculino')->url() ?>"  class="torneodiv bitten"><p class="slider-text">Fútbol 7 Masculino</p></a>
-      <div class="textodiv bitten" style="padding: 20px; text-align: left">
+      <!-- <div class="textodiv bitten" style="padding: 20px; text-align: left">
 
         <p class="poiret"><?= $page->text() ?></p>
 
-      </div>
+      </div> -->
 
 
       <?= snippet('sponsors') ?>
