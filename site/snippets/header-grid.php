@@ -8,9 +8,9 @@
     <a href="http://instagram.com/lagartosfutbol">
       <i class="fab fa-instagram"></i>
     </a>
-    <a href="http://facebook.com/lagartosfutbol">
+    <!-- <a href="http://facebook.com/lagartosfutbol">
       <i class="fab fa-facebook"></i>
-    </a>
+    </a> -->
     <a href="tel:11-5336-1391">
       <i class="fas fa-phone"></i>
     </a>
