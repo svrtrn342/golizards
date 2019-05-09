@@ -15,6 +15,12 @@ body {
 }
 
 
+@media only screen and (max-width: 424px) {
+  #tablaPos, #tablaJug, .header-torneo h4{
+    zoom: .75
+  }
+}
+
 /* html{
   height: fit-content;
   min-height: 100%;
@@ -28,8 +34,12 @@ body{
   background-attachment: fixed;
 } */
 *{
-  font-family: 'Audiowide', monospace;
+  font-family: 'Poiret One';
+  /* font-family: 'Audiowide', monospace; */
+  text-transform: uppercase;
+  font-weight: bold;
 }
+
 .poiret, .poiret p, .poiret a, .poiret marquee{
   font-family: "Poiret One" !important;
   color: #000
@@ -183,7 +193,8 @@ padding: 10px;
 .page-title {
     grid-area: title;
     text-align: center;
-    font-family: Monoton;
+    /* font-family: Monoton; */
+    font-family: 'Poiret One';
     padding: 10px;
     text-shadow: 0px 0px 10px #666;
     background: #28a745cc;
@@ -191,6 +202,11 @@ padding: 10px;
     box-shadow: 0 0 10px -5px #000;
     margin: 0;
     color: #fff;
+}
+
+a i{
+  text-decoration: none;
+  color: #fff
 }
 
 .sponsordiv { grid-area: sponsors;

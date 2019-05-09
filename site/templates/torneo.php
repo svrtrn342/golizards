@@ -45,8 +45,8 @@ p.proxDate {
     'title title'
     'loader loader'
     'equipos equipos'
-    'jugadores jugadores'
     'proximafecha proximafecha'
+    'jugadores jugadores'
     'sponsors sponsors'
     'fixture fixture'
     ;
@@ -107,7 +107,7 @@ p.proxDate {
 
 <h1 class="page-title">Futbol 7 masculino</h1>
 
-<div class="equipos p-0 bitten" style="overflow: auto">
+<div class="equipos p-0 bitten" style="overflow-x: auto">
   <h2 class="tabla-header">tabla de posiciones</h2>
   <table class="tabla" id="tablaPos" border="1">
     <thead>

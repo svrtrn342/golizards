@@ -69,7 +69,8 @@ a.slider-text,p.slider-text  {
     'sponsors sponsors'
     'quote quote'
     'title title'
-    'mapa contacto'
+    'mapa mapa'
+    'contacto contacto'
     'texto texto'
     ;
     grid-template-columns: 40%;
@@ -77,6 +78,9 @@ a.slider-text,p.slider-text  {
   .contacto{
     padding: 10px;
     zoom: 0.8;
+  }
+  .torneodiv{
+    height: 200px;
   }
 }
 

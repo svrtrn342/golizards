@@ -11,7 +11,7 @@
     <!-- <a href="http://facebook.com/lagartosfutbol">
       <i class="fab fa-facebook"></i>
     </a> -->
-    <a href="tel:11-5336-1391">
+    <a href="tel:0230-4346087">
       <i class="fas fa-phone"></i>
     </a>
   </div>
