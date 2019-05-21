@@ -79,6 +79,11 @@ nav, footer{
   border: solid 1px #000f;
   /* box-shadow: 0 0 10px -7px; */
 }
+
+.jugadores{
+  width: 80%
+}
+
 .tabla td{
   font-size: 14px;
 }
@@ -285,7 +290,7 @@ a.nav-link {
   body{
     padding: 0;
     /* padding-bottom: 56px; */
-    background: #60a268;
+    background: #1b4420;
   }
   .signature{
     display: none;
