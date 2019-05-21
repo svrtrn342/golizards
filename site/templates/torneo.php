@@ -53,6 +53,11 @@ p.proxDate {
     grid-template-columns: 50%;
   }
 }
+@media only screen and (max-width: 424px) {
+  #tablaPos, #tablaJug, .header-torneo h4{
+    zoom: .75
+  }
+}
 </style>
 
 

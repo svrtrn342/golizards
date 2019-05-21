@@ -6,11 +6,11 @@ Quote: Jugá con amigos, jugá en las mejores canchas
 
 ----
 
-Banner: Fecha suspendida por lluvia!
+Banner: 
 
 ----
 
-Text: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+Text: 
 
 ----
 
@@ -20,5 +20,5 @@ Mapa: mapa.png
 
 Mail: 
 
-futbollagartos@gmail.com
-11-5741-2163
+MAIL: lagartosfutbol@gmail.com
+TEL : 0230 4346087
