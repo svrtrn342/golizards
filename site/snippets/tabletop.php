@@ -57,7 +57,7 @@ function init() {
     }
     // FIXTURE
     for (j = 1; j <= totalF; j++) {
-      temphtml = '<div class="fixture-div"><p>Fecha ' + j + ' <span class="poiret">' + groupedFixture[j][0].Dia + '</span></p>'
+      temphtml = '<div class="fixture-div w-100"><p>Fecha ' + j + ' <span class="poiret">' + groupedFixture[j][0].Dia + '</span></p>'
       // temphtml += '<p>Dia ' + groupedFixture[j][0].Dia + '</p>'
 
       if (j<proximaF) {
