@@ -197,7 +197,7 @@ p.proxDate {
         </div>
 
         <div class="fairplay bitten">
-          <h2 class="tabla-header">amonestados</h2>
+          <h2 class="tabla-header">tarjetas</h2>
           <table class="tabla" id="tablaFair" border="1">
             <thead>
               <tr>

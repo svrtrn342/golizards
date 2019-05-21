@@ -331,14 +331,14 @@ h5{
 }
 
 .jugadores,.fairplay{
-  width: 80%
+  width: 80%;
+  justify-self: center;
 }
 .fairplay{
-  justify-self: flex-end;
 }
 }
-.fairplay h2{
-  text-align: right;
+.jugadores h2,.fairplay h2,.fixture h2{
+  text-align: center;
 }
 
 .tAmarilla{
