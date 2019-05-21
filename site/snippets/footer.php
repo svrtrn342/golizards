@@ -7,7 +7,7 @@
 <footer class="page-footer font-small indigo">
 
     <h6 class="signature poiret">
-      Diseñada por <a href="#">Hernan Levi</a>
+      Diseñada por <a href="http://levihernan.com">Hernan Levi</a>
     </h6>
 
   </footer>

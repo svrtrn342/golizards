@@ -12,6 +12,8 @@
 .page-text{
   grid-area: text;
   padding: 20px 40px;
+  text-transform: none !important;
+
 }
 </style>
 
