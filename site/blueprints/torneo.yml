@@ -12,3 +12,8 @@ fields:
   gsheet:
     label: gSheet
     type:  text
+
+  boton:
+    label: imagen
+    type:  image
+    required: true
