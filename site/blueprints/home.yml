@@ -24,3 +24,8 @@ fields:
     label: Mail
     type:  textarea
     size:  small
+
+  background:
+    label: Background
+    type:  image
+    required: true

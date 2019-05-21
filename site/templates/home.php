@@ -1,4 +1,8 @@
+<?php go($site->find('futbol-7-masculino')->url()) ?>
+
+
 <?php snippet('header') ?>
+
 
 <link href="https://fonts.googleapis.com/css?family=Audiowide|Monoton|Poiret+One|Press+Start+2P" rel="stylesheet">
 

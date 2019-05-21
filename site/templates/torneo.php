@@ -10,6 +10,11 @@
   overflow: auto !important;
   max-height: 288px;
 }
+.fairplay {
+  grid-area: fairplay;
+  overflow: auto !important;
+  max-height: 288px;
+}
 .proximafecha{
   grid-area: proximafecha
 }
@@ -30,6 +35,9 @@ p.proxDate {
   'equipos jugadores'
   'fixture proximafecha'
   'fixture sponsors'
+  'fixture fairplay'
+  'fixture mapa'
+  'fixture contacto'
   'fixture null'
   ;
   grid-template-columns: 60%;
@@ -38,19 +46,50 @@ p.proxDate {
   grid-area: loader;
 }
 
+.carousel {
+  grid-area: fotos;
+  height: 100px;
+}
+
+.contacto{
+  grid-area: contacto;
+  padding: 20px;
+}
+.contacto .poiret{
+  zoom: 0.8;
+}
+
+.mapa{
+  background: url('<?= $site->find('home')->mapa()->toFile()->url() ?>');
+  padding: 50px 20px;
+  grid-area: mapa;
+}
+
+.marquee {
+  grid-area: quote;
+  height: fit-content;
+  margin: auto 0;
+  display: flex;
+  align-items: center;
+}
+
+
 @media only screen and (max-width: 768px) {
   .grid-container {
     grid-template-areas:
-    'header header'
-    'title title'
-    'loader loader'
-    'equipos equipos'
-    'proximafecha proximafecha'
-    'jugadores jugadores'
-    'sponsors sponsors'
-    'fixture fixture'
+    'header'
+    'title'
+    'loader'
+    'equipos'
+    'proximafecha'
+    'jugadores'
+    'sponsors'
+    'fairplay'
+    'fixture'
+    'mapa'
+    'contacto'
     ;
-    grid-template-columns: 50%;
+    grid-template-columns: 100%;
   }
 }
 @media only screen and (max-width: 424px) {
@@ -112,6 +151,8 @@ p.proxDate {
 
 <h1 class="page-title">Futbol 7 masculino</h1>
 
+<div class="marquee poiret"><marquee scrollamount="10"><?= $site->find('home')->banner() ?></marquee></div>
+
 <div class="equipos p-0 bitten" style="overflow-x: auto; overflow-y: hidden">
   <h2 class="tabla-header">tabla de posiciones</h2>
   <table class="tabla" id="tablaPos" border="1">
@@ -126,6 +167,7 @@ p.proxDate {
         <td>GF</td>
         <td>GC</td>
         <td>Dif</td>
+        <td>FP</td>
         <!-- <td>Amarillas</td>
           <td>Rojas</td>
           <td>FairPlay</td> -->
@@ -154,6 +196,25 @@ p.proxDate {
           </table>
         </div>
 
+        <div class="fairplay bitten">
+          <h2 class="tabla-header">amonestados</h2>
+          <table class="tabla" id="tablaFair" border="1">
+            <thead>
+              <tr>
+                <td>Jugador</td>
+                <td>Equipo</td>
+                <td><span class="tAmarilla"></span></td>
+                <td><span class="tRoja"></span></td>
+                <!-- <td>Amarillas</td>
+                  <td>Rojas</td> -->
+                </tr>
+              </thead>
+              <!-- <tr><td>Bana</td><td>Cachengue</td><td>4</td></tr><tr><td>Noni</td><td>Cachengue</td><td>1</td></tr><tr><td>Pochi</td><td>Cumbia</td><td>2</td></tr><tr><td>Palga</td><td>Village</td><td>2</td></tr><tr><td>Susi</td><td>Village</td><td>3</td></tr>
+                <tr><td>Bana</td><td>Cachengue</td><td>4</td></tr><tr><td>Noni</td><td>Cachengue</td><td>1</td></tr><tr><td>Pochi</td><td>Cumbia</td><td>2</td></tr><tr><td>Palga</td><td>Village</td><td>2</td></tr><tr><td>Susi</td><td>Village</td><td>3</td></tr>
+                <tr><td>Bana</td><td>Cachengue</td><td>4</td></tr><tr><td>Noni</td><td>Cachengue</td><td>1</td></tr><tr><td>Pochi</td><td>Cumbia</td><td>2</td></tr><tr><td>Palga</td><td>Village</td><td>2</td></tr><tr><td>Susi</td><td>Village</td><td>3</td></tr> -->
+              </table>
+            </div>
+
 
 
         <div class="fixture bitten">
@@ -164,6 +225,44 @@ p.proxDate {
           </div>
 
         </div>
+
+        <a href="https://goo.gl/maps/BtPVAc6KGZP7ZhgGA" target="_blank" class="mapa bitten">
+          <h2 class="">cómo llegar?</h2>
+        </a>
+
+        <div class="contacto bitten" id="contacto">
+          <h4>Los Lagartos Country Club</h4>
+          <h5>Ramal Pilar Km 46, <br>Pilar, Buenos Aires</h5>
+          <div class="poiret">
+            <?= $site->find('home')->mail()->kirbytext() ?>
+          </div>
+        </div>
+
+        <!-- <div class="carousel p-0">
+          <div id="carouselExampleControls" class="carousel slide h-100" data-ride="carousel">
+            <div class="carousel-inner h-100">
+              <?php foreach ($site->find('home')->children()->find('carousel')->images() as $slide): ?>
+                <div class="carousel-item h-100">
+                  <div class="h-100" style="background: url('<?= $slide->url() ?>'); background-size: cover; color: #fff; text-align: left; padding: 20px">
+                    <p class="slider-text"><?= $slide->text() ?>
+                    </div>
+                  </div>
+              <?php endforeach ?>
+              <script type="text/javascript">
+                $('.carousel-item').first().toggleClass('active')
+              </script>
+
+              <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+          </div>
+        </div> -->
 
         <?= snippet('sponsors') ?>
 

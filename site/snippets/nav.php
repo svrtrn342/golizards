@@ -10,11 +10,10 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <a class="nav-link" href="<?= $site->url() ?>">Inicio
-            <!-- <span class="sr-only">(current)</span> -->
           </a>
-        </li>
+        </li> -->
         <li class="nav-item">
           <a class="nav-link" href="<?= $site->children()->find('futbol-7-masculino')->url() ?>">Fútbol Masculino</a>
         </li>

@@ -29,6 +29,12 @@
     gtag('config', 'UA-139839501-1');
   </script>
 
+<style media="screen">
+  html{
+    background: url('<?= $site->children()->find('home')->background()->toFile()->url() ?>') no-repeat center center fixed;
+    background-size: cover; 
+  }
+</style>
 
 </head>
 

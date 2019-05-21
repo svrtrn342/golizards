@@ -23,7 +23,8 @@ function init() {
     proximaF = myBase.meta.elements[1].Data;
     totalF = myBase.meta.elements[2].Data;
     equipos = myBase.equipos.elements;
-    jugadores = myBase.jugadores.elements;
+    jugadores = myBase.goleadores.elements;
+    amonestados = myBase.fairplay.elements;
     fixture = myBase.fixture.elements;
     groupedFixture = _.groupBy(fixture, function(fecha) {
       return fecha.Fecha;
@@ -42,19 +43,34 @@ function init() {
       temphtml += '<td>' + equipos[i].GF + '</td>';
       temphtml += '<td>' + equipos[i].GC + '</td>';
       temphtml += '<td>' + equipos[i].Dif + '</td>';
+      temphtml += '<td>' + equipos[i].FP + '</td>';
       temphtml += '</tr>';
       $('#tablaPos').append(temphtml)
     }
-
     // GOLEADORES
     for (i = 0; i < jugadores.length; i++){
-      temphtml = '<tr>';
-      temphtml += '<td>' + jugadores[i].Jugador + '</td>';
-      temphtml += '<td>' + jugadores[i].Equipo + '</td>';
-      temphtml += '<td>' + jugadores[i].Goles + '</td>';
-      temphtml += '</tr>';
-      $('#tablaJug').append(temphtml)
+      if (jugadores[i].Goles != 0) {
+        temphtml = '<tr>';
+        temphtml += '<td>' + jugadores[i].Jugador + '</td>';
+        temphtml += '<td>' + jugadores[i].Equipo + '</td>';
+        temphtml += '<td>' + jugadores[i].Goles + '</td>';
+        temphtml += '</tr>';
+        $('#tablaJug').append(temphtml)
+      }
     }
+    // GOLEADORES
+    for (i = 0; i < amonestados.length; i++){
+      if ((amonestados[i].Amarillas != 0)|(amonestados[i].Rojas != 0)) {
+        temphtml = '<tr>';
+        temphtml += '<td>' + amonestados[i].Jugador + '</td>';
+        temphtml += '<td>' + amonestados[i].Equipo + '</td>';
+        temphtml += '<td>' + amonestados[i].Amarillas + '</td>';
+        temphtml += '<td>' + amonestados[i].Rojas + '</td>';
+        temphtml += '</tr>';
+        $('#tablaFair').append(temphtml)
+      }
+    }
+
     // FIXTURE
     for (j = 1; j <= totalF; j++) {
       temphtml = '<div class="fixture-div w-100"><p>Fecha ' + j + ' <span class="poiret">' + groupedFixture[j][0].Dia + '</span></p>'

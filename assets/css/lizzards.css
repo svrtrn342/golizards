@@ -1,6 +1,5 @@
 
 html {
-    background: url('../images/field.jpg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100% + 56px);
     overflow: hidden;
@@ -80,9 +79,6 @@ nav, footer{
   /* box-shadow: 0 0 10px -7px; */
 }
 
-.jugadores{
-  width: 80%
-}
 
 .tabla td{
   font-size: 14px;
@@ -277,8 +273,10 @@ a.nav-link {
   display: none;
 }
 
-@media only screen and (min-width: 600px) {
-
+@media only screen and (max-width: 400px) {
+  td:nth-child(7), td:nth-child(8) {
+      display: none;
+  }
 }
 
 @media only screen and (max-width: 1024px) {
@@ -332,4 +330,26 @@ h5{
   font-size: 16px;
 }
 
+.jugadores,.fairplay{
+  width: 80%
+}
+.fairplay{
+  justify-self: flex-end;
+}
+}
+.fairplay h2{
+  text-align: right;
+}
+
+.tAmarilla{
+    width: 10px;
+    height: 10px;
+    background: #ff0;
+    display: inline-block;
+}
+.tRoja{
+    width: 10px;
+    height: 10px;
+    background: #f00;
+    display: inline-block;
 }
