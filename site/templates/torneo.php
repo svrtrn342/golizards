@@ -93,7 +93,7 @@ p.proxDate {
   }
 }
 @media only screen and (max-width: 424px) {
-  #tablaPos, #tablaJug, .header-torneo h4{
+  #tablaPos, #tablaJug, #tablaFair, .header-torneo h4{
     zoom: .75
   }
 }
