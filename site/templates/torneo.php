@@ -10,6 +10,12 @@
   overflow: auto !important;
   max-height: 288px;
 }
+
+.suspendidos {
+  grid-area: suspendidos;
+  overflow: auto !important;
+  max-height: 288px;
+}
 .fairplay {
   grid-area: fairplay;
   overflow: auto !important;
@@ -36,6 +42,7 @@ p.proxDate {
   'fixture proximafecha'
   'fixture sponsors'
   'fixture fairplay'
+  'fixture suspendidos'
   'fixture mapa'
   'fixture contacto'
   'fixture null'
@@ -85,6 +92,7 @@ p.proxDate {
     'jugadores'
     'sponsors'
     'fairplay'
+    'suspendidos'
     'fixture'
     'mapa'
     'contacto'
@@ -195,6 +203,18 @@ p.proxDate {
             <tr><td>Bana</td><td>Cachengue</td><td>4</td></tr><tr><td>Noni</td><td>Cachengue</td><td>1</td></tr><tr><td>Pochi</td><td>Cumbia</td><td>2</td></tr><tr><td>Palga</td><td>Village</td><td>2</td></tr><tr><td>Susi</td><td>Village</td><td>3</td></tr> -->
           </table>
         </div>
+
+        <div class="suspendidos" id="divSusp">
+          <h2 class="tabla-header text-center">suspendidos</h2>
+          <table class="tabla" id="tablaSusp" border="1">
+            <thead>
+              <tr>
+                <td>Jugador</td>
+                <td>Fechas</td>
+                </tr>
+              </thead>
+              </table>
+            </div>
 
         <div class="fairplay bitten">
           <h2 class="tabla-header">tarjetas</h2>

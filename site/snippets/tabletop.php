@@ -26,6 +26,7 @@ function init() {
     jugadores = myBase.goleadores.elements;
     amonestados = myBase.fairplay.elements;
     fixture = myBase.fixture.elements;
+    suspendidos = myBase.suspendidos.elements;
     groupedFixture = _.groupBy(fixture, function(fecha) {
       return fecha.Fecha;
     });
@@ -58,7 +59,7 @@ function init() {
         $('#tablaJug').append(temphtml)
       }
     }
-    // GOLEADORES
+    // AMONESTADOS
     for (i = 0; i < amonestados.length; i++){
       if ((amonestados[i].Amarillas != 0)|(amonestados[i].Rojas != 0)) {
         temphtml = '<tr>';
@@ -116,6 +117,18 @@ function init() {
     }
     $('#proximaFechaTabla').append(temphtml)
 
+
+    // SUSPENDIDOS
+    if (suspendidos.length == 0) {
+      $('#divSusp').css('height','0')
+    }
+    for (i = 0; i < suspendidos.length; i++){
+        temphtml = '<tr>';
+        temphtml += '<td>' + suspendidos[i].Jugador + '</td>';
+        temphtml += '<td>' + suspendidos[i].Fechas + '</td>';
+        temphtml += '</tr>';
+        $('#tablaSusp').append(temphtml)
+    }
 
     $('.svgLoader').hide('slow')
   } //documentReady
