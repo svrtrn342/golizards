@@ -1162,6 +1162,26 @@ class Parsedown
                 ),
             );
         }
+        if (strpos($Excerpt['text'], '>') !== false and preg_match('/^<((tel:)?\S+?@\S+?)>/i', $Excerpt['text'], $matches))
+        {
+            $url = $matches[1];
+
+            if ( ! isset($matches[2]))
+            {
+                $url = 'tel:' . $url;
+            }
+
+            return array(
+                'extent' => strlen($matches[0]),
+                'element' => array(
+                    'name' => 'a',
+                    'text' => $matches[1],
+                    'attributes' => array(
+                        'href' => $url,
+                    ),
+                ),
+            );
+        }
     }
 
     protected function inlineEmphasis($Excerpt)
@@ -1479,7 +1499,7 @@ class Parsedown
         {
             $markup .= '>';
 
-            if (!isset($Element['nonNestables'])) 
+            if (!isset($Element['nonNestables']))
             {
                 $Element['nonNestables'] = array();
             }

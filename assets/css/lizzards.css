@@ -354,3 +354,7 @@ h5{
     background: #f00;
     display: inline-block;
 }
+
+.navbar-brand{
+  text-transform: none
+}
