@@ -20,8 +20,8 @@ Mapa: mapa.png
 
 Mail: 
 
-MAIL: lagartosfutbol@gmail.com
-TEL : (link: tel:lalala text: 0230 4346087)
+(link: mailto:lagartosfutbol@gmail.com text: lagartosfutbol@gmail.com)
+(tel:0230-4346087 text: 0230-4346087)
 
 ----
 
