@@ -222,7 +222,7 @@ a i{
 }
 
 .sponsordiv { grid-area: sponsors;
-  padding: 0 40px !important;
+  /* padding: 0 40px !important; */
   background: 0 !important;
   box-shadow: 0 0 !important;
   display: flex;

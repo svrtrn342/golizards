@@ -1,5 +1,5 @@
 <div class="sponsordiv">
-  <div class="row">
+  <div class="row align-items-center">
 
     <?php foreach ($site->children()->find('sponsors')->images() as $sponsor): ?>
       <div class="col sponsorcol">
