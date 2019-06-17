@@ -1,4 +1,5 @@
 <?php snippet('header') ?>
+<?= css('assets/css/brackets.css') ?>
 
 <?= js('assets/js/tabletop.js') ?>
 
@@ -39,6 +40,8 @@ p.proxDate {
   'title title'
   'loader loader'
   'equipos jugadores'
+  'bracketOro bracketOro'
+  'bracketPlata bracketPlata'
   'fixture proximafecha'
   'fixture sponsors'
   'fixture fairplay'
@@ -79,7 +82,15 @@ p.proxDate {
   display: flex;
   align-items: center;
 }
+#bracketOro {
+  grid-area: bracketOro;
+  padding: 0 20px;
+}
 
+#bracketPlata {
+  grid-area: bracketPlata;
+  padding: 0 20px;
+}
 
 @media only screen and (max-width: 768px) {
   .grid-container {
@@ -88,6 +99,8 @@ p.proxDate {
     'title'
     'loader'
     'equipos'
+    'bracketOro'
+    'bracketPlata'
     'proximafecha'
     'jugadores'
     'sponsors'
@@ -297,12 +310,48 @@ p.proxDate {
               </table>
             </div>
           </div>
+
+        <div id="bracketOro" class="bracket bitten" style="display:none">
+          <h2 class="tabla-header">Copa Oro</h2>
+          <div class="split split-one mb-3">
+            <div class="round round-one current" id="semiCopaOro">
+                <div>Semifinal <span class="poiret" id="semiFinalOroDate"></span></div>
+            </div>
+            <div class="round round-two" id="finalCopaOro">
+              <div>Final <span class="poiret" id="finalOroDate"></span></div>
+            </div>
+          <div class="trophy">
+            <i class="fa fa-trophy"></i>
+          </div>
         </div>
+      </div>
+
+      <div id="bracketPlata" class="bracket bitten" style="display:none">
+        <h2 class="tabla-header">Copa Plata</h2>
+        <div class="split split-one mb-3">
+          <div class="round round-one current" id="semiCopaPlata">
+            <div>Semifinal <span class="poiret" id="semiFinalPlataDate"></span></div>
+          </div>
+          <div class="round round-two" id="finalCopaPlata">
+            <div>Final <span class="poiret" id="finalPlataDate"></span></div>
+          </div>
+          <div class="trophy plata">
+            <i class="fa fa-trophy"></i>
+          </div>
+        </div>
+      </div>
+
+
+
+</div>
 
         <script type="text/javascript">
           var public_spreadsheet_url = '<?= $page->gsheet() ?>';
           var myBase
         </script>
+
+
+
 
         <?php snippet('tabletop') ?>
 

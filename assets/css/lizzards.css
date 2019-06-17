@@ -18,6 +18,15 @@ body {
   #tablaPos, #tablaJug, .header-torneo h4{
     zoom: .75
   }
+  .bracket{
+    zoom: .75
+  }
+  .trophy{
+    display: none !important;
+  }
+  .team{
+    font-size: 12px
+  }
 }
 
 /* html{

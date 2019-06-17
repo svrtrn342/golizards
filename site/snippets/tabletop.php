@@ -27,6 +27,7 @@ function init() {
     amonestados = myBase.fairplay.elements;
     fixture = myBase.fixture.elements;
     suspendidos = myBase.suspendidos.elements;
+    playoffs = myBase.playoffs.elements;
     groupedFixture = _.groupBy(fixture, function(fecha) {
       return fecha.Fecha;
     });
@@ -129,6 +130,59 @@ function init() {
         temphtml += '</tr>';
         $('#tablaSusp').append(temphtml)
     }
+
+    for (i = 0; i < playoffs.length; i++){
+      if ((playoffs[i].Torneo == "A") && (playoffs[i].Ronda == "1")) {
+        temphtml = '<ul class="matchup">';
+        temphtml += '<li class="team team-top">' + playoffs[i].Local + '<span class="score">' + playoffs[i].gl + '</span></li>';
+        temphtml += '<li class="team team-bottom">' + playoffs[i].Visitante + '<span class="score">' + playoffs[i].gv + '</span></li>';
+        temphtml += '<li class="bracket-date">' + playoffs[i].Hora + '</li>';
+        temphtml += '</ul>';
+        $('#semiCopaOro').append(temphtml)
+      }
+      if ((playoffs[i].Torneo == "A") && (playoffs[i].Ronda == "2")) {
+        if (playoffs[i].Local != "") {
+          $('#finalCopaOro').addClass('current');
+        }
+        temphtml = '<ul class="matchup">';
+        temphtml += '<li class="team team-top">' + playoffs[i].Local + '<span class="score">' + playoffs[i].gl + '</span></li>';
+        temphtml += '<li class="team team-bottom">' + playoffs[i].Visitante + '<span class="score">' + playoffs[i].gv + '</span></li>';
+        temphtml += '<li class="bracket-date">' + playoffs[i].Hora + '</li>';
+        temphtml += '</ul>';
+        $('#finalCopaOro').append(temphtml)
+      }
+
+
+      if ((playoffs[i].Torneo == "B") && (playoffs[i].Ronda == "1")) {
+        temphtml = '<ul class="matchup">';
+        temphtml += '<li class="team team-top">' + playoffs[i].Local + '<span class="score">' + playoffs[i].gl + '</span></li>';
+        temphtml += '<li class="team team-bottom">' + playoffs[i].Visitante + '<span class="score">' + playoffs[i].gv + '</span></li>';
+        temphtml += '<li class="bracket-date">' + playoffs[i].Hora + '</li>';
+        temphtml += '</ul>';
+        $('#semiCopaPlata').append(temphtml)
+      }
+      if ((playoffs[i].Torneo == "B") && (playoffs[i].Ronda == "2")) {
+        if (playoffs[i].Local != "") {
+          $('#finalCopaPlata').addClass('current');
+        }
+        temphtml = '<ul class="matchup">';
+        temphtml += '<li class="team team-top">' + playoffs[i].Local + '<span class="score">' + playoffs[i].gl + '</span></li>';
+        temphtml += '<li class="team team-bottom">' + playoffs[i].Visitante + '<span class="score">' + playoffs[i].gv + '</span></li>';
+        temphtml += '<li class="bracket-date">' + playoffs[i].Hora + '</li>';
+        temphtml += '</ul>';
+        $('#finalCopaPlata').append(temphtml)
+      }
+    }
+
+    if (myBase.meta.elements[3].Data == 'TRUE') {
+      $('#bracketOro').show('slow')
+      $('#bracketPlata').show('slow')
+    }
+
+    $('#semiFinalOroDate').append(myBase.meta.elements[4].Data);
+    $('#finalOroDate').append(myBase.meta.elements[5].Data);
+    $('#semiFinalPlataDate').append(myBase.meta.elements[6].Data);
+    $('#finalPlataDate').append(myBase.meta.elements[7].Data);
 
     $('.svgLoader').hide('slow')
   } //documentReady
