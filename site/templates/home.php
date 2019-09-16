@@ -82,6 +82,7 @@ a.slider-text,p.slider-text  {
     'header header'
     'fotos fotos'
     'torneos torneos'
+    'torneos-fem torneos-fem'
     'sponsors sponsors'
     'quote quote'
     'title title'
