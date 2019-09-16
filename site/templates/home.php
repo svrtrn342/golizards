@@ -154,8 +154,8 @@ h6:hover {
       <a href="<?= $site->children()->find('futbol-7-masculino')->url() ?>"  class="torneodiv bitten"><p class="slider-text">
         Fútbol 7 Masculino
       </p></a>
-      <a href="<?= $site->children()->find('futbol-7-femenino')->url() ?>"  class="torneodiv-fem bitten"><p class="slider-text">
-        Fútbol 7 Femenino
+      <a href="<?= $site->children()->find('futbol-5-femenino')->url() ?>"  class="torneodiv-fem bitten"><p class="slider-text">
+        Fútbol 5 Femenino
       </p></a>
       <!-- <div class="textodiv bitten" style="padding: 20px; text-align: left">
 

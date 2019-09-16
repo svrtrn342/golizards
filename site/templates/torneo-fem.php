@@ -183,7 +183,7 @@ p.proxDate {
 
 
 
-<h1 class="page-title">Futbol 7 femenino</h1>
+<h1 class="page-title">Futbol 5 femenino</h1>
 
 <div class="marquee poiret"><marquee scrollamount="10"><?= $site->find('home')->banner() ?></marquee></div>
 
