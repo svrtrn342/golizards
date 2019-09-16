@@ -41,7 +41,7 @@ a.slider-text,p.slider-text  {
 .torneodiv-fem { grid-area: torneos-fem;
   /* padding: 10px; */
   height: 140px;
-  background: url('<?= $site->children()->find('futbol-7-femenino')->boton()->toFile()->url() ?>');
+  background: url('<?= $site->children()->find('futbol-femenino')->boton()->toFile()->url() ?>');
   background-size: cover;
   background-position: 50% 50%;
   color: #fff;
