@@ -107,6 +107,11 @@ h6:hover {
   /*text-decoration: underline;*/
 }
 
+.sponsordiv .row {
+  max-width: 700px;
+  margin: auto;
+}
+
 </style>
 
 </head>
