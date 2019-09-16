@@ -1,4 +1,4 @@
-<?php go($site->find('futbol-7-masculino')->url()) ?>
+<!--?php go($site->find('futbol-7-masculino')->url()) ?-->
 
 
 <?php snippet('header') ?>
@@ -29,8 +29,19 @@ a.slider-text,p.slider-text  {
 }
 .torneodiv { grid-area: torneos;
   /* padding: 10px; */
-  height: 120px;
+  height: 140px;
   background: url('<?= $site->children()->find('futbol-7-masculino')->boton()->toFile()->url() ?>');
+  background-size: cover;
+  background-position: 50% 50%;
+  color: #fff;
+  transition: all ease 0.5s;
+  padding: 20px !important;
+  text-align: left !important;
+}
+.torneodiv-fem { grid-area: torneos-fem;
+  /* padding: 10px; */
+  height: 140px;
+  background: url('<?= $site->children()->find('futbol-7-femenino')->boton()->toFile()->url() ?>');
   background-size: cover;
   background-position: 50% 50%;
   color: #fff;
@@ -54,8 +65,9 @@ a.slider-text,p.slider-text  {
   grid-template-areas:
   'header header'
   'fotos torneos'
-  'fotos sponsors'
-  'quote sponsors'
+  'fotos torneos-fem'
+  'sponsors sponsors'
+  'quote quote'
   'title title'
   'mapa contacto'
   ;
@@ -83,7 +95,7 @@ a.slider-text,p.slider-text  {
     padding: 10px;
     zoom: 0.8;
   }
-  .torneodiv{
+  .torneodiv, .torneodiv-fem{
     height: 200px;
   }
 }
@@ -132,8 +144,12 @@ h6:hover {
 
 
       <div class="marquee poiret"><marquee scrollamount="10"><?= $page->banner() ?></marquee></div>
+
       <a href="<?= $site->children()->find('futbol-7-masculino')->url() ?>"  class="torneodiv bitten"><p class="slider-text">
         Fútbol 7 Masculino
+      </p></a>
+      <a href="<?= $site->children()->find('futbol-7-femenino')->url() ?>"  class="torneodiv-fem bitten"><p class="slider-text">
+        Fútbol 7 Femenino
       </p></a>
       <!-- <div class="textodiv bitten" style="padding: 20px; text-align: left">
 
