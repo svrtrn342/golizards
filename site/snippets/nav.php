@@ -18,7 +18,7 @@
           <a class="nav-link" href="<?= $site->children()->find('futbol-7-masculino')->url() ?>">Fútbol Masculino</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="<?= $site->children()->find('futbol-7-femenino')->url() ?>">Fútbol Femenino</a>
+          <a class="nav-link" href="<?= $site->children()->find('futbol-femenino')->url() ?>">Fútbol Femenino</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="<?= $site->children()->find('faq')->url() ?>">FAQ</a>
