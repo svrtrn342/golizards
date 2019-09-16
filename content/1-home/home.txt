@@ -21,8 +21,8 @@ Mapa: mapa.png
 Mail: 
 
 (link: mailto:lagartosfutbol@gmail.com text: lagartosfutbol@gmail.com)
-(tel:0230-4346087 text: 0230-4346087)
+(tel: 1157412163 text: 1157412163)
 
 ----
 
-Background: soccer-field-night.jpg
+Background: stadium.jpg
