@@ -213,7 +213,7 @@ p.proxDate {
 
     </div>
     <div class="jugadores">
-      <h2 class="tabla-header">goleadores</h2>
+      <h2 class="tabla-header">goleadoras</h2>
       <table class="tabla" id="tablaJug" border="1">
         <thead>
           <tr>
@@ -231,7 +231,7 @@ p.proxDate {
         </div>
 
         <div class="suspendidos" id="divSusp">
-          <h2 class="tabla-header text-center">suspendidos</h2>
+          <h2 class="tabla-header text-center">suspendidas</h2>
           <table class="tabla" id="tablaSusp" border="1">
             <thead>
               <tr>
