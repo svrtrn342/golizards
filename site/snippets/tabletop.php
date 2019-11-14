@@ -107,17 +107,17 @@ function init() {
     if (myBase.meta.elements[3].Data == 'FALSE') {
         $('#proximaFechaNumber').html(proximaF)
         $('#proximaFechaFecha').html(groupedFixture[proximaF][0].Dia)
+        temphtml = ''
+        for (i = 0; i < groupedFixture[proximaF].length; i++) {
+          temphtml += '<tr>'
+          temphtml += '<td>' + groupedFixture[proximaF][i].Hora + '</td>'
+          temphtml += '<td>' + groupedFixture[proximaF][i].Local + '</td>'
+          temphtml += '<td>' + groupedFixture[proximaF][i].Visitante + '</td>'
+          temphtml += '</tr>'
+        }
+        $('#proximaFechaTabla').append(temphtml)
       }
 
-        temphtml = ''
-    for (i = 0; i < groupedFixture[proximaF].length; i++) {
-      temphtml += '<tr>'
-      temphtml += '<td>' + groupedFixture[proximaF][i].Hora + '</td>'
-      temphtml += '<td>' + groupedFixture[proximaF][i].Local + '</td>'
-      temphtml += '<td>' + groupedFixture[proximaF][i].Visitante + '</td>'
-      temphtml += '</tr>'
-    }
-    $('#proximaFechaTabla').append(temphtml)
 
 
     // SUSPENDIDOS
