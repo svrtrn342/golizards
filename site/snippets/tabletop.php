@@ -35,7 +35,6 @@ function init() {
 
     if (myBase.meta.elements[3].Data == 'TRUE') {
       proximaF = totalF;
-      totalF ++
     }
 
     // POSICIONES
