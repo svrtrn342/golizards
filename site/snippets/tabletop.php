@@ -34,7 +34,8 @@ function init() {
     fecha1 = groupedFixture[1]
 
     if (myBase.meta.elements[3].Data == 'TRUE') {
-      proximaF = totalF
+      proximaF = totalF;
+      totalF ++
     }
 
     // POSICIONES
