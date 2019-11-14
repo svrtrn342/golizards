@@ -117,6 +117,9 @@ function init() {
         }
         $('#proximaFechaTabla').append(temphtml)
       }
+      else {
+        $('#proximaF').hide()
+      }
 
 
 
