@@ -42,6 +42,7 @@ p.proxDate {
   'equipos jugadores'
   'bracketOro bracketOro'
   'bracketPlata bracketPlata'
+  'bracketBronze bracketBronze'
   'fixture proximafecha'
   'fixture sponsors'
   'fixture fairplay'
