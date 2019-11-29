@@ -45,6 +45,10 @@
   text-shadow: silver 0 0 10px;
 }
 
+.trophy.bronze{
+  text-shadow: bronze 0 0 10px;
+}
+
 .split{
   width: 100%
 }
