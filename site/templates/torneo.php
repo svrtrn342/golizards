@@ -41,8 +41,8 @@ p.proxDate {
   'loader loader'
   'equipos jugadores'
   'bracketOro bracketOro'
-  'bracketPlata bracketPlata'
-  'bracketBronze bracketBronze'
+  /* 'bracketPlata bracketPlata'
+  'bracketBronze bracketBronze' */
   'fixture proximafecha'
   'fixture sponsors'
   'fixture fairplay'
@@ -98,6 +98,11 @@ p.proxDate {
   padding: 0 20px;
 }
 
+.bracket-test{
+  grid-area: bracketTest;
+  padding: 0 20px;
+}
+
 @media only screen and (max-width: 768px) {
   .grid-container {
     grid-template-areas:
@@ -106,8 +111,8 @@ p.proxDate {
     'loader'
     'equipos'
     'bracketOro'
-    'bracketPlata'
-    'bracketBronze'
+    /* 'bracketPlata'
+    'bracketBronze' */
     'proximafecha'
     'jugadores'
     'sponsors'
@@ -324,7 +329,7 @@ p.proxDate {
             <div class="round round-one current" id="cuartosCopaOro">
                 <div>Cuartos <span class="poiret" id="cuartosFinalOroDate"></span></div>
             </div>
-            <div class="round round-twoo current" id="semiCopaOro">
+            <div class="round round-two current" id="semiCopaOro">
                 <div>Semifinal <span class="poiret" id="semiFinalOroDate"></span></div>
             </div>
             <div class="round round-three" id="finalCopaOro">
@@ -335,6 +340,8 @@ p.proxDate {
           </div>
         </div>
       </div>
+
+
 
       <!-- <div id="bracketPlata" class="bracket bitten" style="display:none">
         <h2 class="tabla-header">Copa Plata</h2>
