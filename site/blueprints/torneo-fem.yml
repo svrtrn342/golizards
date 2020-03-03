@@ -1,0 +1,19 @@
+title: Torneo
+pages: true
+files: true
+fields:
+  title:
+    label: Title
+    type:  text
+  # text:
+  #   label: Text
+  #   type:  textarea
+
+  gsheet:
+    label: gSheet
+    type:  text
+
+  boton:
+    label: imagen
+    type:  image
+    required: true

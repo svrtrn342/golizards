@@ -1,4 +1,4 @@
-Title: Futbol 7 Femenino
+Title: Futbol Femenino
 
 ----
 
@@ -10,4 +10,4 @@ Gsheet: 1qTXuL_zwbAqxsXbsLJ1bVC9bKMeKszVMN1UeJZC__Ys
 
 ----
 
-Boton: fooball.jpg
+Boton: femenino.png
