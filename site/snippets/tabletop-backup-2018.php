@@ -204,13 +204,12 @@ function init() {
       $('#bracketBronze').show('slow')
     }
 
-    $('#cuartosFinalOroDate').append(myBase.meta.elements[4].Data);
-    $('#semiFinalOroDate').append(myBase.meta.elements[5].Data);
-    $('#finalOroDate').append(myBase.meta.elements[6].Data);
-    // $('#semiFinalPlataDate').append(myBase.meta.elements[6].Data);
-    // $('#finalPlataDate').append(myBase.meta.elements[7].Data);
-    // $('#semiFinalBronzeDate').append(myBase.meta.elements[8].Data);
-    // $('#finalBronzeDate').append(myBase.meta.elements[9].Data);
+    $('#semiFinalOroDate').append(myBase.meta.elements[4].Data);
+    $('#finalOroDate').append(myBase.meta.elements[5].Data);
+    $('#semiFinalPlataDate').append(myBase.meta.elements[6].Data);
+    $('#finalPlataDate').append(myBase.meta.elements[7].Data);
+    $('#semiFinalBronzeDate').append(myBase.meta.elements[8].Data);
+    $('#finalBronzeDate').append(myBase.meta.elements[9].Data);
 
     $('.svgLoader').hide('slow')
   } //documentReady
