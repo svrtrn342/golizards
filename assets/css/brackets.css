@@ -16,7 +16,7 @@
 .score {font-size: 11px;text-transform: uppercase;float: right;color: #2C7399;font-weight: bold;font-family: 'Roboto Condensed', sans-serif;position: absolute;right: 5px;}
 .team {padding: 0 5px;margin: 3px 0;height: 25px; line-height: 25px;white-space: nowrap; overflow: hidden;position: relative;}
 .round-two .matchup {margin:0; height: 60px;padding: 80px 0;}
-.round-three .matchup {margin:0; height: 60px; padding: 190px 0;}
+.round-three .matchup {margin:0; height: 60px; padding: 160px 0;}
 .champion li, .round li {background-color: #fff;box-shadow: none; opacity: 0.45;}
 .current li {opacity: 1;}
 .current li.team {background-color: #fff;box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);opacity: 1;}
@@ -25,6 +25,10 @@
 .share-icon {font-size: 24px; color: #fff;padding: 25px;}
 .share-wrap {max-width: 1100px; text-align: center; margin: 60px auto;}
 .final {margin: 4.5em 0;}
+
+.round {
+  white-space: nowrap;
+}
 
 
 .bracket-date{
