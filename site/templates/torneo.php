@@ -321,10 +321,13 @@ p.proxDate {
         <div id="bracketOro" class="bracket bitten" style="display:none">
           <h2 class="tabla-header">Copa Oro</h2>
           <div class="split split-one mb-3">
-            <div class="round round-one current" id="semiCopaOro">
+            <div class="round round-one current" id="cuartosCopaOro">
+                <div>Cuartos <span class="poiret" id="cuartosFinalOroDate"></span></div>
+            </div>
+            <div class="round round-twoo current" id="semiCopaOro">
                 <div>Semifinal <span class="poiret" id="semiFinalOroDate"></span></div>
             </div>
-            <div class="round round-two" id="finalCopaOro">
+            <div class="round round-three" id="finalCopaOro">
               <div>Final <span class="poiret" id="finalOroDate"></span></div>
             </div>
           <div class="trophy">
@@ -333,7 +336,7 @@ p.proxDate {
         </div>
       </div>
 
-      <div id="bracketPlata" class="bracket bitten" style="display:none">
+      <!-- <div id="bracketPlata" class="bracket bitten" style="display:none">
         <h2 class="tabla-header">Copa Plata</h2>
         <div class="split split-one mb-3">
           <div class="round round-one current" id="semiCopaPlata">
@@ -361,7 +364,7 @@ p.proxDate {
             <i class="fa fa-trophy"></i>
           </div>
         </div>
-      </div>
+      </div> -->
 
 
 
