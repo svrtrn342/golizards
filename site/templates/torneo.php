@@ -86,6 +86,7 @@ p.proxDate {
 #bracketOro {
   grid-area: bracketOro;
   padding: 0 20px;
+  overflow-x: auto;
 }
 
 #bracketPlata {
