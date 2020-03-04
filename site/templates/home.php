@@ -19,7 +19,16 @@ a.slider-text,p.slider-text  {
   padding: 20px;
 }
 
-.carousel { grid-area: fotos; }
+.carousel-div {
+  grid-area: fotos;
+  height: 500px;
+}
+
+.carousel-item > div{
+  background-position: 50% !important;
+  /* background: #000 !important */
+}
+
 .marquee {
   grid-area: quote;
   height: fit-content;
@@ -27,10 +36,22 @@ a.slider-text,p.slider-text  {
   display: flex;
   align-items: center;
 }
-.torneodiv { grid-area: torneos;
+.torneodiv-a { grid-area: torneos-a;
   /* padding: 10px; */
-  height: 140px;
-  background: url('<?= $site->children()->find('futbol-7-masculino')->boton()->toFile()->url() ?>');
+  height: 180px;
+  background: url('<?= $site->children()->find('masculino-a')->boton()->toFile()->url() ?>');
+  background-size: cover;
+  background-position: 50% 50%;
+  color: #fff;
+  transition: all ease 0.5s;
+  padding: 20px !important;
+  text-align: left !important;
+}
+
+.torneodiv-b { grid-area: torneos-b;
+  /* padding: 10px; */
+  height: 180px;
+  background: url('<?= $site->children()->find('masculino-b')->boton()->toFile()->url() ?>');
   background-size: cover;
   background-position: 50% 50%;
   color: #fff;
@@ -40,7 +61,7 @@ a.slider-text,p.slider-text  {
 }
 .torneodiv-fem { grid-area: torneos-fem;
   /* padding: 10px; */
-  height: 140px;
+  height: 180px;
   background: url('<?= $site->children()->find('futbol-femenino')->boton()->toFile()->url() ?>');
   background-size: cover;
   background-position: 50% 50%;
@@ -63,26 +84,30 @@ a.slider-text,p.slider-text  {
 .grid-container {
   display: grid;
   grid-template-areas:
-  'header header'
-  'fotos torneos'
-  'fotos torneos-fem'
-  'sponsors sponsors'
-  'quote quote'
-  'title title'
-  'mapa contacto'
+  'header header header'
+  'fotos fotos fotos'
+  'torneos-fem torneos-a torneos-b'
+  'sponsors sponsors sponsors'
+  'quote quote quote'
+  'title title title'
+  'mapa contacto contacto'
   ;
   /* 'fotos texto' */
   grid-gap: 5px;
   padding: 10px;
-  grid-template-columns: 50%;
+  grid-template-columns: 33%;
 }
 @media only screen and (max-width: 768px) {
+  .carousel-div{
+    height: 50vh
+  }
   .grid-container {
     grid-template-areas:
     'header header'
     'fotos fotos'
-    'torneos torneos'
     'torneos-fem torneos-fem'
+    'torneos-a torneos-a'
+    'torneos-b torneos-b'
     'sponsors sponsors'
     'quote quote'
     'title title'
@@ -96,7 +121,7 @@ a.slider-text,p.slider-text  {
     padding: 10px;
     zoom: 0.8;
   }
-  .torneodiv, .torneodiv-fem{
+  .torneodiv-a, .torneodiv-b, .torneodiv-fem{
     height: 200px;
   }
 }
@@ -121,7 +146,7 @@ h6:hover {
   <div class="grid-container">
     <?php snippet('header-grid') ?>
 
-    <div class="carousel p-0">
+    <div class="carousel-div p-0">
       <div id="carouselExampleControls" class="carousel slide h-100" data-ride="carousel">
         <div class="carousel-inner h-100">
           <?php foreach ($page->children()->find('carousel')->images() as $slide): ?>
@@ -151,10 +176,14 @@ h6:hover {
 
       <div class="marquee poiret"><marquee scrollamount="10"><?= $page->banner() ?></marquee></div>
 
-      <a href="<?= $site->children()->find('futbol-7-masculino')->url() ?>"  class="torneodiv bitten"><p class="slider-text">
-        Fútbol 7 Masculino
+      <a href="<?= $site->children()->find('masculino-a')->url() ?>"  class="torneodiv-a bitten"><p class="slider-text">
+        Fútbol 7 Masculino A
       </p></a>
-      <a href="<?= $site->children()->find('futbol-femenino')->url() ?>"  class="torneodiv-fem bitten"><p class="slider-text">
+      <a href="<?= $site->children()->find('masculino-b')->url() ?>"  class="torneodiv-b bitten"><p class="slider-text">
+        Fútbol 7 Masculino B
+      </p></a>
+      <a   class="torneodiv-fem bitten"><p class="slider-text">
+        <!-- href="<?= $site->children()->find('futbol-femenino')->url() ?>" -->
         Fútbol Femenino
       </p></a>
       <!-- <div class="textodiv bitten" style="padding: 20px; text-align: left">

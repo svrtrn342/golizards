@@ -15,10 +15,13 @@
           </a>
         </li> -->
         <li class="nav-item">
-          <a class="nav-link" href="<?= $site->children()->find('futbol-7-masculino')->url() ?>">Fútbol Masculino</a>
+          <a class="nav-link" href="<?= $site->children()->find('futbol-femenino')->url() ?>">Femenino</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="<?= $site->children()->find('futbol-femenino')->url() ?>">Fútbol Femenino</a>
+          <a class="nav-link" href="<?= $site->children()->find('masculino-a')->url() ?>">Masculino A</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="<?= $site->children()->find('masculino-b')->url() ?>">Masculino B</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="<?= $site->children()->find('faq')->url() ?>">FAQ</a>
