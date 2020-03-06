@@ -159,7 +159,7 @@ h6:hover {
     <div class="carousel-div p-0 mx-md-5 mx-sm-0">
       <div id="carouselExampleControls" class="carousel slide h-100" data-ride="carousel">
         <div class="carousel-inner h-100">
-          <?php foreach ($page->children()->find('carousel')->images() as $slide): ?>
+          <?php foreach ($page->children()->find('carousel')->images()->sortBy('sort') as $slide): ?>
             <div class="carousel-item h-100">
               <div class="h-100" style="background: url('<?= $slide->url() ?>'); background-size: cover; color: #fff; text-align: left; padding: 20px">
                 <p class="slider-text"><?= $slide->text() ?>
