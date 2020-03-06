@@ -12,7 +12,10 @@ a.slider-text,p.slider-text  {
   text-shadow: 0 0 10px #000;
   max-width: 50%;
   text-decoration: none;
-  color: #fff
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  margin-right: 20px
 }
 .mapa{
   background: url('<?= $page->mapa()->toFile()->url() ?>');
@@ -38,7 +41,7 @@ a.slider-text,p.slider-text  {
 }
 .torneodiv-a { grid-area: torneos-a;
   /* padding: 10px; */
-  height: 180px;
+  /* height: 180px; */
   background: url('<?= $site->children()->find('masculino-a')->boton()->toFile()->url() ?>');
   background-size: cover;
   background-position: 50% 50%;
@@ -50,7 +53,7 @@ a.slider-text,p.slider-text  {
 
 .torneodiv-b { grid-area: torneos-b;
   /* padding: 10px; */
-  height: 180px;
+  /* height: 180px; */
   background: url('<?= $site->children()->find('masculino-b')->boton()->toFile()->url() ?>');
   background-size: cover;
   background-position: 50% 50%;
@@ -61,7 +64,7 @@ a.slider-text,p.slider-text  {
 }
 .torneodiv-fem { grid-area: torneos-fem;
   /* padding: 10px; */
-  height: 180px;
+  /* height: 180px; */
   background: url('<?= $site->children()->find('futbol-femenino')->boton()->toFile()->url() ?>');
   background-size: cover;
   background-position: 50% 50%;
@@ -99,7 +102,10 @@ a.slider-text,p.slider-text  {
 }
 @media only screen and (max-width: 768px) {
   .carousel-div{
-    height: 50vh
+    height: 50vw
+  }
+  a.slider-text, p.slider-text {
+    font-size: 12px;
   }
   .grid-container {
     grid-template-areas:
@@ -122,10 +128,14 @@ a.slider-text,p.slider-text  {
     zoom: 0.8;
   }
   .torneodiv-a, .torneodiv-b, .torneodiv-fem{
-    height: 200px;
+    height: 50vw;
   }
 }
 
+.torneodiv-a, .torneodiv-b, .torneodiv-fem{
+  position: relative;
+  height: 200px;
+}
 h6{
   margin: 20px;
 }
@@ -146,7 +156,7 @@ h6:hover {
   <div class="grid-container">
     <?php snippet('header-grid') ?>
 
-    <div class="carousel-div p-0">
+    <div class="carousel-div p-0 mx-md-5 mx-sm-0">
       <div id="carouselExampleControls" class="carousel slide h-100" data-ride="carousel">
         <div class="carousel-inner h-100">
           <?php foreach ($page->children()->find('carousel')->images() as $slide): ?>

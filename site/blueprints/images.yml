@@ -1,6 +1,7 @@
 title: Images
 pages: false
-files: true
+files:
+  sortable: true
   fields:
     text:
       label: Texto
