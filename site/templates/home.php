@@ -187,11 +187,11 @@ h6:hover {
       <div class="marquee poiret"><marquee scrollamount="10"><?= $page->banner() ?></marquee></div>
 
       <a href="<?= $site->children()->find('masculino-a')->url() ?>"  class="torneodiv-a bitten"><p class="slider-text">
-        Fútbol 7 Masculino A
+        Fútbol 7 Masculino
       </p></a>
-      <a href="<?= $site->children()->find('masculino-b')->url() ?>"  class="torneodiv-b bitten"><p class="slider-text">
+      <!-- <a href="<?= $site->children()->find('masculino-b')->url() ?>"  class="torneodiv-b bitten"><p class="slider-text">
         Fútbol 7 Masculino B
-      </p></a>
+      </p></a> -->
       <a   class="torneodiv-fem bitten"><p class="slider-text">
         <!-- href="<?= $site->children()->find('futbol-femenino')->url() ?>" -->
         Fútbol Femenino
