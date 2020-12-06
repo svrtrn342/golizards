@@ -18,11 +18,11 @@
           <a class="nav-link" href="<?= $site->children()->find('futbol-femenino')->url() ?>">Femenino</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="<?= $site->children()->find('masculino-a')->url() ?>">Masculino A</a>
+          <a class="nav-link" href="<?= $site->children()->find('masculino-a')->url() ?>">Masculino</a>
         </li>
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <a class="nav-link" href="<?= $site->children()->find('masculino-b')->url() ?>">Masculino B</a>
-        </li>
+        </li> -->
         <li class="nav-item">
           <a class="nav-link" href="<?= $site->children()->find('faq')->url() ?>">FAQ</a>
         </li>
