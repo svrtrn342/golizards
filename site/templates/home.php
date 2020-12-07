@@ -189,11 +189,11 @@ h6:hover {
       <a href="<?= $site->children()->find('masculino-a')->url() ?>"  class="torneodiv-a bitten"><p class="slider-text">
         Fútbol 7 Masculino
       </p></a>
-      <!-- <a href="<?= $site->children()->find('masculino-b')->url() ?>"  class="torneodiv-b bitten"><p class="slider-text">
+      <a  class="torneodiv-b bitten"><p class="slider-text">
+        <!-- href="<?= $site->children()->find('masculino-b')->url() ?>"  -->
         Fútbol 7 Masculino B
-      </p></a> -->
-      <a   class="torneodiv-fem bitten"><p class="slider-text">
-        <!-- href="<?= $site->children()->find('futbol-femenino')->url() ?>" -->
+      </p></a>
+      <a href="<?= $site->children()->find('futbol-femenino')->url() ?>"   class="torneodiv-fem bitten"><p class="slider-text">
         Fútbol Femenino
       </p></a>
       <!-- <div class="textodiv bitten" style="padding: 20px; text-align: left">
