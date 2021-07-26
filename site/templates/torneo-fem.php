@@ -366,7 +366,7 @@ p.proxDate {
 
 
 
-        <?php snippet('tabletop') ?>
+        <?php snippet('tabletop-semifinal') ?>
 
 
         <?php snippet('footer') ?>
