@@ -42,6 +42,7 @@ p.proxDate {
   'equipos jugadores'
   'bracketOro bracketOro'
   'bracketPlata bracketPlata'
+  'bracketBronze bracketBronze'
   'fixture proximafecha'
   'fixture sponsors'
   'fixture fairplay'
@@ -92,6 +93,11 @@ p.proxDate {
   padding: 0 20px;
 }
 
+#bracketBronze {
+  grid-area: bracketBronze;
+  padding: 0 20px;
+}
+
 @media only screen and (max-width: 768px) {
   .grid-container {
     grid-template-areas:
@@ -101,6 +107,7 @@ p.proxDate {
     'equipos'
     'bracketOro'
     'bracketPlata'
+    'bracketBronze'
     'proximafecha'
     'jugadores'
     'sponsors'
@@ -349,6 +356,21 @@ p.proxDate {
             <div>Final <span class="poiret" id="finalPlataDate"></span></div>
           </div>
           <div class="trophy plata">
+            <i class="fa fa-trophy"></i>
+          </div>
+        </div>
+      </div>
+
+      <div id="bracketBronze" class="bracket bitten" style="display:none">
+        <h2 class="tabla-header">Copa Bronce</h2>
+        <div class="split split-one mb-3">
+          <div class="round round-one current" id="semiCopaBronze">
+            <div>Semifinal <span class="poiret" id="semiFinalBronzeDate"></span></div>
+          </div>
+          <div class="round round-two" id="finalCopaBronze">
+            <div>Final <span class="poiret" id="finalBronzeDate"></span></div>
+          </div>
+          <div class="trophy bronze">
             <i class="fa fa-trophy"></i>
           </div>
         </div>

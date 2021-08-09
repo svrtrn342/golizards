@@ -184,32 +184,32 @@ function init() {
         temphtml += '</ul>';
         $('#finalCopaPlata').append(temphtml)
       }
-      //
-      // if ((playoffs[i].Torneo == "C") && (playoffs[i].Ronda == "1")) {
-      //   temphtml = '<ul class="matchup">';
-      //   temphtml += '<li class="team team-top">' + playoffs[i].Local + '<span class="score">' + playoffs[i].gl + '</span></li>';
-      //   temphtml += '<li class="team team-bottom">' + playoffs[i].Visitante + '<span class="score">' + playoffs[i].gv + '</span></li>';
-      //   temphtml += '<li class="bracket-date">' + playoffs[i].Hora + '</li>';
-      //   temphtml += '</ul>';
-      //   $('#semiCopaBronze').append(temphtml)
-      // }
-      // if ((playoffs[i].Torneo == "C") && (playoffs[i].Ronda == "2")) {
-      //   if (playoffs[i].Local != "") {
-      //     $('#finalCopaBronze').addClass('current');
-      //   }
-      //   temphtml = '<ul class="matchup">';
-      //   temphtml += '<li class="team team-top">' + playoffs[i].Local + '<span class="score">' + playoffs[i].gl + '</span></li>';
-      //   temphtml += '<li class="team team-bottom">' + playoffs[i].Visitante + '<span class="score">' + playoffs[i].gv + '</span></li>';
-      //   temphtml += '<li class="bracket-date">' + playoffs[i].Hora + '</li>';
-      //   temphtml += '</ul>';
-      //   $('#finalCopaBronze').append(temphtml)
-      // }
+
+      if ((playoffs[i].Torneo == "C") && (playoffs[i].Ronda == "1")) {
+        temphtml = '<ul class="matchup">';
+        temphtml += '<li class="team team-top">' + playoffs[i].Local + '<span class="score">' + playoffs[i].gl + '</span></li>';
+        temphtml += '<li class="team team-bottom">' + playoffs[i].Visitante + '<span class="score">' + playoffs[i].gv + '</span></li>';
+        temphtml += '<li class="bracket-date">' + playoffs[i].Hora + '</li>';
+        temphtml += '</ul>';
+        $('#semiCopaBronze').append(temphtml)
+      }
+      if ((playoffs[i].Torneo == "C") && (playoffs[i].Ronda == "2")) {
+        if (playoffs[i].Local != "") {
+          $('#finalCopaBronze').addClass('current');
+        }
+        temphtml = '<ul class="matchup">';
+        temphtml += '<li class="team team-top">' + playoffs[i].Local + '<span class="score">' + playoffs[i].gl + '</span></li>';
+        temphtml += '<li class="team team-bottom">' + playoffs[i].Visitante + '<span class="score">' + playoffs[i].gv + '</span></li>';
+        temphtml += '<li class="bracket-date">' + playoffs[i].Hora + '</li>';
+        temphtml += '</ul>';
+        $('#finalCopaBronze').append(temphtml)
+      }
     }
 
     if (myBase.meta.elements[3].Data == 'TRUE') {
       $('#bracketOro').show('slow')
       $('#bracketPlata').show('slow')
-      // $('#bracketBronze').show('slow')
+      $('#bracketBronze').show('slow')
     }
 
     // $('#cuartosFinalOroDate').append(myBase.meta.elements[4].Data);
