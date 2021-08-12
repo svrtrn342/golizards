@@ -90,8 +90,9 @@ for(var i=0;i<sheetnames.length;i++){
     console.log(data);
    
     myBase = data;
-	proximaF = myBase.meta[1][1];
-	totalF =   myBase.meta[2][1];
+	proximaF = myBase.meta[1].Data;
+	totalF =   myBase.meta[2].Data;
+	
 	equipos = myBase.equipos;
 	
 	
@@ -149,6 +150,7 @@ for(var i=0;i<sheetnames.length;i++){
     }
 
     // FIXTURE
+	
     for (j = 1; j <= totalF; j++) {
       temphtml = '<div class="fixture-div w-100"><p>Fecha ' + j + ' <span class="poiret">' + groupedFixture[j][0].Dia + '</span></p>'
       // temphtml += '<p>Dia ' + groupedFixture[j][0].Dia + '</p>'
@@ -174,7 +176,8 @@ for(var i=0;i<sheetnames.length;i++){
           temphtml += '</tr>'
         }
       }
-      temphtml += '</table>'
+      temphtml += '</table>';
+	  
       $('#fechas').append(temphtml)
     }
 
