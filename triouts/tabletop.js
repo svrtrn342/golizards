@@ -7,7 +7,7 @@
     throw new Error("The 'request' module is only available while running in Node.");
   };
   if(inNodeJS) { // This will get stripped out by Uglify, and Webpack will not include it
-    request = require('request');
+    var axios = require('axios');
   }
 
   var supportsCORS = false;
@@ -65,6 +65,7 @@
     }
 
     this.callback = options.callback;
+    this.error = options.error;
     this.wanted = options.wanted || [];
     this.key = options.key;
     this.simpleSheet = !!options.simpleSheet;
@@ -79,7 +80,7 @@
     this.singleton = !!options.singleton;
     this.simpleUrl = !!(options.simpleUrl || options.simple_url); //jshint ignore:line
     this.authkey = options.authkey;
-    this.sheetPrivacy = this.authkey ? 'private' : 'public'
+    this.sheetPrivacy = this.authkey ? 'private' : 'public';
 
     this.callbackContext = options.callbackContext;
     // Default to on, unless there's a proxy, in which case it's default off
@@ -139,8 +140,12 @@
       this.baseJsonPath += 'json-in-script';
     }
 
+    if (this.authkey) {
+      this.baseJsonPath += '&oauth_token=' + this.authkey;
+    }
+
     if(!this.wait) {
-      this.fetch();
+      return this.fetch();
     }
   };
 
@@ -159,20 +164,29 @@
   Tabletop.prototype = {
 
     fetch: function(callback) {
-      if (typeof(callback) !== 'undefined') {
-        this.callback = callback;
-      }
-      this.requestData(this.baseJsonPath, this.loadSheets);
+      var self = this;
+      return new Promise(function(resolve, reject) {
+        if (typeof(callback) !== 'undefined') {
+          self.callback = callback;
+        }
+        if (!self.callback) {
+          self.callback = resolve;
+        }
+        if (!self.error) {
+          self.error = reject;
+        }
+        self.requestData(self.baseJsonPath, self.loadSheets);
+      });
     },
 
     /*
       This will call the environment appropriate request method.
 
-      In browser it will use JSON-P, in node it will use request()
+      In browser it will use JSON-P, in node it will use axios.get()
     */
     requestData: function(path, callback) {
       this.log('Requesting', path);
-
+      this.encounteredError = false;
       if (inNodeJS) {
         this.serverSideFetch(path, callback);
       } else {
@@ -204,6 +218,9 @@
         }
         callback.call(self, json);
       };
+      if(this.error) {
+        xhr.addEventListener('error', this.error);
+      }
       xhr.send();
     },
 
@@ -267,13 +284,15 @@
     serverSideFetch: function(path, callback) {
       var self = this;
 
-      this.log('Fetching', this.endpoint + path);
-      request({url: this.endpoint + path, json: true}, function(err, resp, body) {
-        if (err) {
-          return console.error(err);
-        }
-        callback.call(self, body);
-      });
+      axios.get(this.endpoint + path)
+        .then(function(response) {
+          callback.call(self, response.data);
+        })
+        .catch(function(err) {
+          if (err) {
+            return console.error(err);
+          }
+        });
     },
 
     /*
@@ -330,7 +349,12 @@
     loadSheets: function(data) {
       var i, ilen;
       var toLoad = [];
-      this.googleSheetName = data.feed.title.$t;
+      try {
+        this.googleSheetName = data.feed.title.$t;
+      } catch(err) {
+        this.error(err);
+        return;
+      }
       this.foundSheetNames = [];
 
       for (i = 0, ilen = data.feed.entry.length; i < ilen ; i++) {
@@ -354,6 +378,9 @@
           }
           if (this.reverse) {
             jsonPath += '&reverse=true';
+          }
+          if (this.authkey) {
+            jsonPath += '&oauth_token=' + this.authkey;
           }
           toLoad.push(jsonPath);
         }
@@ -518,9 +545,9 @@
     },
 
     beforeReady: function() {
-      if(this.postProcess) {
-        for (i = 0, ilen = this.elements.length; i < ilen; i++) {
-          this.postProcess(element);
+      if(this.tabletop.postProcess) {
+        for (var i = 0, ilen = this.elements.length; i < ilen; i++) {
+          this.tabletop.postProcess(this.elements[i]);
         }
       }
     },
