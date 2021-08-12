@@ -9,25 +9,82 @@
 //   return 0;
 // }
 
+var googledata={}; /* this array contains all google spreadsheets data */
+
+/*set the google spreadsheet public json link with variable {sheet_tab_name} where different sheet names will be used.*/
+var public_spreadsheet_url="https://sheets.googleapis.com/v4/spreadsheets/1qTXuL_zwbAqxsXbsLJ1bVC9bKMeKszVMN1UeJZC__Ys/values/{sheet_tab_name}/?key=AIzaSyCRlo0uTPnoL9Vz7pB5VMXg5FhHzPFla10";
+
+var sheetnames=["meta","equipos","goleadores","fairplay","fixture","suspendidos","playoffs"]; /* all spreadsheets names */
+
+
+/* This function converts V4 plain json to key,value paired json array */
+function convert_to_old_format(new_json){
+
+var old_json=[];
+for(var i=1;i<new_json.length;i++)	{
+var sub_json={};	
+for(var j=0;j<new_json[0].length;j++)	{
+try{
+sub_json[new_json[0][j]]=new_json[i][j];
+}catch(ex){}	
+	
+}
+old_json.push(sub_json)	;
+	
+}
+
+return old_json;
+	
+}
+/* This function take sheet url and sheetname and returns json data. It also checks whether all spreadsheets are fetched and execute showInfo function */
+function fetch_sheet_tab_json(tab_url,tab_name){
+	let xhr = new XMLHttpRequest();
+	console.log(tab_url);
+    xhr.open("GET", tab_url, true);
+	 xhr.onload = function() {
+		  
+		googledata[tab_name]=convert_to_old_format(JSON.parse(xhr.response).values);
+		var willshowinfo=true;
+		for(var i=0;i<sheetnames.length;i++){
+		if(!googledata[sheetnames[i]]){
+			willshowinfo=false;
+		}	
+		}
+		if(willshowinfo){
+        showInfo(googledata);
+		}
+      }
+	xhr.send();
+
+    return xhr.responseText;
+	
+}	
+
 function init() {
-  Tabletop.init( { key: public_spreadsheet_url,
-    callback: showInfo,
-    simpleSheet: false } );
+    console.log('Fetching updated data.');
+
+/* looping through all sheets name and fetch json data */
+for(var i=0;i<sheetnames.length;i++){
+	fetch_sheet_tab_json(public_spreadsheet_url.replace("{sheet_tab_name}",sheetnames[i]),sheetnames[i]);
+}
+
+
   }
 
   window.addEventListener('DOMContentLoaded', init)
 
   function showInfo(data) {
     console.log(data);
-    myBase = data
-    proximaF = myBase.meta.elements[1].Data;
-    totalF = myBase.meta.elements[2].Data;
-    equipos = myBase.equipos.elements;
-    jugadores = myBase.goleadores.elements;
-    amonestados = myBase.fairplay.elements;
-    fixture = myBase.fixture.elements;
-    suspendidos = myBase.suspendidos.elements;
-    playoffs = myBase.playoffs.elements;
+	myBase = data;
+	proximaF = myBase.meta[1].Data;
+	totalF =   myBase.meta[2].Data;
+	equipos = myBase.equipos;
+    jugadores = myBase.goleadores;
+	amonestados = myBase.fairplay;
+	fixture = myBase.fixture;
+	suspendidos = myBase.suspendidos;
+	playoffs = myBase.playoffs;
+	
     groupedFixture = _.groupBy(fixture, function(fecha) {
       return fecha.Fecha;
     });
@@ -104,7 +161,7 @@ function init() {
     }
 
 
-    if (myBase.meta.elements[3].Data == 'FALSE') {
+    if (myBase.meta[3].Data == 'FALSE') {
         $('#proximaFechaNumber').html(proximaF)
         $('#proximaFechaFecha').html(groupedFixture[proximaF][0].Dia)
         temphtml = ''
@@ -206,15 +263,15 @@ function init() {
       // }
     }
 
-    if (myBase.meta.elements[3].Data == 'TRUE') {
+    if (myBase.meta[3].Data == 'TRUE') {
       $('#bracketOro').show('slow')
       // $('#bracketPlata').show('slow')
       // $('#bracketBronze').show('slow')
     }
 
-    $('#cuartosFinalOroDate').append(myBase.meta.elements[4].Data);
-    $('#semiFinalOroDate').append(myBase.meta.elements[5].Data);
-    $('#finalOroDate').append(myBase.meta.elements[6].Data);
+    $('#cuartosFinalOroDate').append(myBase.meta[4].Data);
+    $('#semiFinalOroDate').append(myBase.meta[5].Data);
+    $('#finalOroDate').append(myBase.meta[6].Data);
     // $('#semiFinalPlataDate').append(myBase.meta.elements[6].Data);
     // $('#finalPlataDate').append(myBase.meta.elements[7].Data);
     // $('#semiFinalBronzeDate').append(myBase.meta.elements[8].Data);
